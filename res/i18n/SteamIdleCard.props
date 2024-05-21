@@ -1,0 +1,36 @@
+<Project>
+	<ItemGroup>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\SteamIdleCard.resx">
+			<Link>Resources\Strings.resx</Link>
+			<LogicalName>FxResources.SteamIdleCard.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\SteamIdleCard.en.resx">
+			<Link>Resources\Strings.en.resx</Link>
+			<LogicalName>FxResources.SteamIdleCard.en.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\SteamIdleCard.es.resx">
+			<Link>Resources\Strings.es.resx</Link>
+			<LogicalName>FxResources.SteamIdleCard.es.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\SteamIdleCard.it.resx">
+			<Link>Resources\Strings.it.resx</Link>
+			<LogicalName>FxResources.SteamIdleCard.it.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\SteamIdleCard.ja.resx">
+			<Link>Resources\Strings.ja.resx</Link>
+			<LogicalName>FxResources.SteamIdleCard.ja.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\SteamIdleCard.ko.resx">
+			<Link>Resources\Strings.ko.resx</Link>
+			<LogicalName>FxResources.SteamIdleCard.ko.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\SteamIdleCard.ru.resx">
+			<Link>Resources\Strings.ru.resx</Link>
+			<LogicalName>FxResources.SteamIdleCard.ru.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\SteamIdleCard.zh-Hant.resx">
+			<Link>Resources\Strings.zh-Hant.resx</Link>
+			<LogicalName>FxResources.SteamIdleCard.zh-Hant.resources</LogicalName>
+		</EmbeddedResource>
+	</ItemGroup>
+</Project>

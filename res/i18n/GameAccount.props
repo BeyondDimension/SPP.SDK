@@ -1,0 +1,36 @@
+<Project>
+	<ItemGroup>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\GameAccount.resx">
+			<Link>Resources\Strings.resx</Link>
+			<LogicalName>FxResources.GameAccount.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\GameAccount.en.resx">
+			<Link>Resources\Strings.en.resx</Link>
+			<LogicalName>FxResources.GameAccount.en.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\GameAccount.es.resx">
+			<Link>Resources\Strings.es.resx</Link>
+			<LogicalName>FxResources.GameAccount.es.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\GameAccount.it.resx">
+			<Link>Resources\Strings.it.resx</Link>
+			<LogicalName>FxResources.GameAccount.it.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\GameAccount.ja.resx">
+			<Link>Resources\Strings.ja.resx</Link>
+			<LogicalName>FxResources.GameAccount.ja.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\GameAccount.ko.resx">
+			<Link>Resources\Strings.ko.resx</Link>
+			<LogicalName>FxResources.GameAccount.ko.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\GameAccount.ru.resx">
+			<Link>Resources\Strings.ru.resx</Link>
+			<LogicalName>FxResources.GameAccount.ru.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\GameAccount.zh-Hant.resx">
+			<Link>Resources\Strings.zh-Hant.resx</Link>
+			<LogicalName>FxResources.GameAccount.zh-Hant.resources</LogicalName>
+		</EmbeddedResource>
+	</ItemGroup>
+</Project>

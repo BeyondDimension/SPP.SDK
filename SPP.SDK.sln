@@ -1,0 +1,140 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34902.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mobius.Primitives", "src\Mobius.Primitives\Mobius.Primitives.csproj", "{24613FE5-29CE-4122-8F54-A4AB56C8BAF5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mobius.Models", "src\Mobius.Models\Mobius.Models.csproj", "{1EEABF91-A516-4E05-9A91-2CCC74B0AA02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mobius.SDK", "src\Mobius.SDK\Mobius.SDK.csproj", "{7A044B9C-449B-4BFE-B2E0-E79F28BE8BD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Root", "0.Root", "{5A0A4C89-96F3-4CA6-BA36-C1AA64A5AF57}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.GitHub", "0.GitHub", "{84A642E7-C57F-4BEE-B2A8-80975AFD6EA0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ISSUE_TEMPLATE", "ISSUE_TEMPLATE", "{F4CEF2C7-4F2A-43F5-8FEF-847DB4A7BB7D}"
+	ProjectSection(SolutionItems) = preProject
+		.github\ISSUE_TEMPLATE\bug-report.en.md = .github\ISSUE_TEMPLATE\bug-report.en.md
+		.github\ISSUE_TEMPLATE\bug-report.md = .github\ISSUE_TEMPLATE\bug-report.md
+		.github\ISSUE_TEMPLATE\question.en.md = .github\ISSUE_TEMPLATE\question.en.md
+		.github\ISSUE_TEMPLATE\question.md = .github\ISSUE_TEMPLATE\question.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Doc", "1.Doc", "{80F088E8-FBD3-49EE-B5FD-F952C97372DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Src", "2.Src", "{E8341650-D405-4B6B-BA48-1EE5B0585401}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Root", "0.Root", "{4BA673DD-FD19-4CF0-8A4D-A226AD84F5BE}"
+	ProjectSection(SolutionItems) = preProject
+		src\.editorconfig = src\.editorconfig
+		src\Directory.Build.props = src\Directory.Build.props
+		src\Directory.Build.targets = src\Directory.Build.targets
+		ref\Common\src\Directory.Packages.props = ref\Common\src\Directory.Packages.props
+		src\Version.props = src\Version.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0.Sdk", "0.Sdk", "{D5507810-56D2-4D13-866F-01EEBF0CCED4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Reference", "1.Reference", "{E4DB4AA5-C274-49B6-AAB3-B0DC9D5562BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common8", "Common8", "{4B1AA28D-8CBF-42D2-AFD4-9BF65BEDEF02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BD.Common8.SourceGenerator.Bcl", "ref\Common\src\BD.Common8.SourceGenerator.Bcl\BD.Common8.SourceGenerator.Bcl.csproj", "{BEF934E9-2BE2-4A74-AC4F-52B0DDCBDE26}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BD.Common8.SourceGenerator.ResX", "ref\Common\src\BD.Common8.SourceGenerator.ResX\BD.Common8.SourceGenerator.ResX.csproj", "{F00CB962-B9F1-472F-8F45-76254284FE07}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BD.Common8.Bcl", "ref\Common\src\BD.Common8.Bcl\BD.Common8.Bcl.csproj", "{C9E83956-D50A-43F5-8549-11874B531600}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Libraries", "2.Libraries", "{CAF8D0BA-1B08-4F91-9472-84D4B3199F1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.UnitTest", "3.UnitTest", "{3D869908-A6E5-4049-8FCC-CF39186884C5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Tools", "4.Tools", "{A16A9164-C179-4AFB-B551-8343467F4D20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mobius.SDK.UnitTest", "src\Mobius.SDK.UnitTest\Mobius.SDK.UnitTest.csproj", "{71CA1A65-C689-416B-AA0E-7B8ECCBECB43}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tools.Build", "src\Tools.Build\Tools.Build.csproj", "{33308294-845A-4FD3-A0DA-EFA5DE3AFF7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mobius.SDK.Sdk", "src\Sdk\Mobius.SDK.Sdk.csproj", "{58EDFF4D-08EA-4C2F-9DDF-7EE8553135A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{8AF7307C-568F-4D40-8392-267DFA24E003}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\CI.yml = .github\workflows\CI.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24613FE5-29CE-4122-8F54-A4AB56C8BAF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24613FE5-29CE-4122-8F54-A4AB56C8BAF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24613FE5-29CE-4122-8F54-A4AB56C8BAF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24613FE5-29CE-4122-8F54-A4AB56C8BAF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EEABF91-A516-4E05-9A91-2CCC74B0AA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EEABF91-A516-4E05-9A91-2CCC74B0AA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EEABF91-A516-4E05-9A91-2CCC74B0AA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EEABF91-A516-4E05-9A91-2CCC74B0AA02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A044B9C-449B-4BFE-B2E0-E79F28BE8BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A044B9C-449B-4BFE-B2E0-E79F28BE8BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A044B9C-449B-4BFE-B2E0-E79F28BE8BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A044B9C-449B-4BFE-B2E0-E79F28BE8BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEF934E9-2BE2-4A74-AC4F-52B0DDCBDE26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEF934E9-2BE2-4A74-AC4F-52B0DDCBDE26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEF934E9-2BE2-4A74-AC4F-52B0DDCBDE26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEF934E9-2BE2-4A74-AC4F-52B0DDCBDE26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F00CB962-B9F1-472F-8F45-76254284FE07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F00CB962-B9F1-472F-8F45-76254284FE07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F00CB962-B9F1-472F-8F45-76254284FE07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F00CB962-B9F1-472F-8F45-76254284FE07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9E83956-D50A-43F5-8549-11874B531600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9E83956-D50A-43F5-8549-11874B531600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9E83956-D50A-43F5-8549-11874B531600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9E83956-D50A-43F5-8549-11874B531600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71CA1A65-C689-416B-AA0E-7B8ECCBECB43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71CA1A65-C689-416B-AA0E-7B8ECCBECB43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71CA1A65-C689-416B-AA0E-7B8ECCBECB43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71CA1A65-C689-416B-AA0E-7B8ECCBECB43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33308294-845A-4FD3-A0DA-EFA5DE3AFF7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33308294-845A-4FD3-A0DA-EFA5DE3AFF7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33308294-845A-4FD3-A0DA-EFA5DE3AFF7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33308294-845A-4FD3-A0DA-EFA5DE3AFF7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58EDFF4D-08EA-4C2F-9DDF-7EE8553135A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58EDFF4D-08EA-4C2F-9DDF-7EE8553135A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58EDFF4D-08EA-4C2F-9DDF-7EE8553135A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58EDFF4D-08EA-4C2F-9DDF-7EE8553135A2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{24613FE5-29CE-4122-8F54-A4AB56C8BAF5} = {CAF8D0BA-1B08-4F91-9472-84D4B3199F1D}
+		{1EEABF91-A516-4E05-9A91-2CCC74B0AA02} = {CAF8D0BA-1B08-4F91-9472-84D4B3199F1D}
+		{7A044B9C-449B-4BFE-B2E0-E79F28BE8BD6} = {CAF8D0BA-1B08-4F91-9472-84D4B3199F1D}
+		{84A642E7-C57F-4BEE-B2A8-80975AFD6EA0} = {5A0A4C89-96F3-4CA6-BA36-C1AA64A5AF57}
+		{F4CEF2C7-4F2A-43F5-8FEF-847DB4A7BB7D} = {84A642E7-C57F-4BEE-B2A8-80975AFD6EA0}
+		{4BA673DD-FD19-4CF0-8A4D-A226AD84F5BE} = {E8341650-D405-4B6B-BA48-1EE5B0585401}
+		{D5507810-56D2-4D13-866F-01EEBF0CCED4} = {4BA673DD-FD19-4CF0-8A4D-A226AD84F5BE}
+		{E4DB4AA5-C274-49B6-AAB3-B0DC9D5562BD} = {E8341650-D405-4B6B-BA48-1EE5B0585401}
+		{4B1AA28D-8CBF-42D2-AFD4-9BF65BEDEF02} = {E4DB4AA5-C274-49B6-AAB3-B0DC9D5562BD}
+		{BEF934E9-2BE2-4A74-AC4F-52B0DDCBDE26} = {4B1AA28D-8CBF-42D2-AFD4-9BF65BEDEF02}
+		{F00CB962-B9F1-472F-8F45-76254284FE07} = {4B1AA28D-8CBF-42D2-AFD4-9BF65BEDEF02}
+		{C9E83956-D50A-43F5-8549-11874B531600} = {4B1AA28D-8CBF-42D2-AFD4-9BF65BEDEF02}
+		{CAF8D0BA-1B08-4F91-9472-84D4B3199F1D} = {E8341650-D405-4B6B-BA48-1EE5B0585401}
+		{3D869908-A6E5-4049-8FCC-CF39186884C5} = {E8341650-D405-4B6B-BA48-1EE5B0585401}
+		{A16A9164-C179-4AFB-B551-8343467F4D20} = {E8341650-D405-4B6B-BA48-1EE5B0585401}
+		{71CA1A65-C689-416B-AA0E-7B8ECCBECB43} = {3D869908-A6E5-4049-8FCC-CF39186884C5}
+		{33308294-845A-4FD3-A0DA-EFA5DE3AFF7B} = {A16A9164-C179-4AFB-B551-8343467F4D20}
+		{58EDFF4D-08EA-4C2F-9DDF-7EE8553135A2} = {D5507810-56D2-4D13-866F-01EEBF0CCED4}
+		{8AF7307C-568F-4D40-8392-267DFA24E003} = {84A642E7-C57F-4BEE-B2A8-80975AFD6EA0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C83AD04-FAEA-44AC-9C9E-C4B72A45AC0F}
+	EndGlobalSection
+EndGlobal

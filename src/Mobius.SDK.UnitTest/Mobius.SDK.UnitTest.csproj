@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net$(DotNet_Version)</TargetFrameworks>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<IsPackable>false</IsPackable>
+		<IsTestProject>true</IsTestProject>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="..\..\ref\Common\src\BD.Common8.UnitTest\Templates\*.cs">
+			<LinkBase>Templates</LinkBase>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="NUnit.Framework" />
+		<Using Include="NUnit.Framework.Interfaces" />
+		<Using Include="NUnit.Framework.Internal" />
+		<Using Include="NUnit.Framework.Internal.Commands" />
+	</ItemGroup>
+
+	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Bcl.props" />
+	<Import Project="$(Path_Submodule)Common\src\Sdk\BD.Common8.UnitTest.props" />
+	<Import Project="$(MSBuildThisFileDirectory)..\Sdk\ProjectReference\Mobius.SDK.props" />
+
+</Project>

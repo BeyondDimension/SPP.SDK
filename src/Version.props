@@ -1,0 +1,8 @@
+<Project>
+	<!-- 版本号 | Version -->
+	<PropertyGroup>
+		<!--3.0.1MMdd.1hhmm-->
+		<Version_Mobius_SDK>8.24.10521.11500</Version_Mobius_SDK>
+		<DefineConstants>$(DefineConstants);VERSION_PREVIEW</DefineConstants>
+	</PropertyGroup>
+</Project>

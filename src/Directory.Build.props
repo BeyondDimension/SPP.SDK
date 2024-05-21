@@ -1,0 +1,49 @@
+<Project>
+	<Import Project="$(MSBuildThisFileDirectory)Version.props" />
+
+	<PropertyGroup>
+		<Path_Submodule>$(MSBuildThisFileDirectory)..\ref\</Path_Submodule>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="Exists('$(MSBuildThisFileDirectory)..\..\..\.gitmodules') AND Exists('$(MSBuildThisFileDirectory)..\..\Common\README.md')">
+		<Path_Submodule>$(MSBuildThisFileDirectory)..\..\</Path_Submodule>
+	</PropertyGroup>
+
+	<Import Project="$(Path_Submodule)Common\src\Sdk\Global.props" />
+
+	<PropertyGroup>
+		<GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+		<GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+		<!--<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>-->
+		<!--<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>-->
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<!--<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>-->
+		<GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<Version>$(Version_Mobius_SDK)</Version>
+	</PropertyGroup>
+
+	<!-- Avalonia -->
+	<PropertyGroup>
+		<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Condition="$(MSBuildProjectName) != 'Tools.Build' AND $(MSBuildProjectName) != 'Tools.DocFX'" Include="..\AssemblyInfo.Attribute.cs">
+			<LinkBase>Properties</LinkBase>
+		</Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Condition="$(MSBuildProjectName) != 'Mobius.SDK.UnitTest' AND $(IsTestProject) != 'true'" Include="$(MSBuildThisFileDirectory)Shared\InternalsVisibleTo.Mobius.SDK.UnitTest.cs">
+			<LinkBase>Properties\InternalsVisibleTo</LinkBase>
+		</Compile>
+	</ItemGroup>
+
+	<Import Project="$(Path_Submodule)Common\src\Sdk\Global.props" />
+</Project>
+

@@ -1,0 +1,36 @@
+<Project>
+	<ItemGroup>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Authenticator.resx">
+			<Link>Resources\Strings.resx</Link>
+			<LogicalName>FxResources.Authenticator.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Authenticator.en.resx">
+			<Link>Resources\Strings.en.resx</Link>
+			<LogicalName>FxResources.Authenticator.en.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Authenticator.es.resx">
+			<Link>Resources\Strings.es.resx</Link>
+			<LogicalName>FxResources.Authenticator.es.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Authenticator.it.resx">
+			<Link>Resources\Strings.it.resx</Link>
+			<LogicalName>FxResources.Authenticator.it.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Authenticator.ja.resx">
+			<Link>Resources\Strings.ja.resx</Link>
+			<LogicalName>FxResources.Authenticator.ja.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Authenticator.ko.resx">
+			<Link>Resources\Strings.ko.resx</Link>
+			<LogicalName>FxResources.Authenticator.ko.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Authenticator.ru.resx">
+			<Link>Resources\Strings.ru.resx</Link>
+			<LogicalName>FxResources.Authenticator.ru.resources</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Authenticator.zh-Hant.resx">
+			<Link>Resources\Strings.zh-Hant.resx</Link>
+			<LogicalName>FxResources.Authenticator.zh-Hant.resources</LogicalName>
+		</EmbeddedResource>
+	</ItemGroup>
+</Project>
