@@ -2,5 +2,7 @@
 	<!-- 全局 using | Global usings -->
 	<ItemGroup>
 		<Using Include="Mobius" />
+		<Using Include="Mobius.Services" />
+		<Using Include="Mobius.Services.Abstractions" />
 	</ItemGroup>
 </Project>

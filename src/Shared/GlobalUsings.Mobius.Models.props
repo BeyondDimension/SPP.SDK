@@ -2,5 +2,28 @@
 	<!-- 全局 using | Global usings -->
 	<ItemGroup>
 		<Using Include="Mobius" />
+		<Using Include="Mobius.Models" />
+		<Using Include="Mobius.Models.Abstractions" />
+		<Using Include="Mobius.Models.App" />
+		<Using Include="Mobius.Models.Drawing" />
+		<Using Include="Mobius.Models.Infrastructure" />
+		<Using Include="Mobius.Models.Settings" />
+		<Using Include="Mobius.Models.Accelerator" />
+		<Using Include="Mobius.Models.Accelerator.Request" />
+		<Using Include="Mobius.Models.Accelerator.Script" />
+		<Using Include="Mobius.Models.Accelerator.YarpConfig" />
+		<Using Include="Mobius.Models.Accelerator.YarpConfig.Abstractions" />
+		<Using Include="Mobius.Models.Basics" />
+		<Using Include="Mobius.Models.Basics.Article" />
+		<Using Include="Mobius.Models.BigDataAnalysis" />
+		<Using Include="Mobius.Models.Identity" />
+		<Using Include="Mobius.Models.Identity.Abstractions" />
+		<Using Include="Mobius.Models.Identity.Request" />
+		<Using Include="Mobius.Models.Identity.Response" />
+		<Using Include="Mobius.Models.Komaasharu" />
+		<Using Include="Mobius.Models.Shop" />
+		<Using Include="Mobius.Models.Shop.Abstractions" />
+		<Using Include="Mobius.Models.Shop.Request" />
+		<Using Include="Mobius.Models.Shop.Response" />
 	</ItemGroup>
 </Project>

@@ -20,7 +20,7 @@ public static partial class AssemblyInfo
     /// 与应用程序关联的产品名称。
     /// <para><see cref="AssemblyTrademarkAttribute"/></para>
     /// </summary>
-    public const string Trademark = "BD.SteamClient8";
+    public const string Trademark = "Mobius.SDK";
 
     /// <summary>
     /// 与应用程序关联的产品名称。

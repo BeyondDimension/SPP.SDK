@@ -2,5 +2,23 @@
 	<!-- 全局 using | Global usings -->
 	<ItemGroup>
 		<Using Include="Mobius" />
+		<Using Include="Mobius.Constants" />
+		<Using Include="Mobius.Enums" />
+		<Using Include="Mobius.Enums.App" />
+		<Using Include="Mobius.Enums.App.PlatformNotification" />
+		<Using Include="Mobius.Enums.Accelerator" />
+		<Using Include="Mobius.Enums.Basics" />
+		<Using Include="Mobius.Enums.Basics.Article" />
+		<Using Include="Mobius.Enums.Basics.Notice" />
+		<Using Include="Mobius.Enums.BigDataAnalysis" />
+		<Using Include="Mobius.Enums.Devices" />
+		<Using Include="Mobius.Enums.Globalization" />
+		<Using Include="Mobius.Enums.Identity" />
+		<Using Include="Mobius.Enums.Infrastructure" />
+		<Using Include="Mobius.Enums.Komaasharu" />
+		<Using Include="Mobius.Enums.Platform" />
+		<Using Include="Mobius.Enums.Shop" />
+		<Using Include="Mobius.Enums.Text" />
+		<Using Include="Mobius.Enums.UI" />
 	</ItemGroup>
 </Project>

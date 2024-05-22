@@ -20,4 +20,15 @@
 		<None Include="$(MSBuildThisFileDirectory)..\Shared\GlobalUsings*.props" Pack="true" PackagePath="Shared" Visible="false" />
 	</ItemGroup>
 
+	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.props" />
+	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.Toast.props" />
+	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.Essentials.props" />
+	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.ApiRsp.props" />
+	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.PersonalData.PhoneNumber.props" />
+	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.PersonalData.BirthDate.props" />
+	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.District.props" />
+
+	<Import Project="$(Path_Submodule)SteamClient\src\Sdk\ProjectReference\BD.SteamClient8.Primitives.props" />
+	<Import Project="$(Path_Submodule)SteamClient\src\Sdk\ProjectReference\BD.SteamClient8.Models.props" />
+
 </Project>
