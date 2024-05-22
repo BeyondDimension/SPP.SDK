@@ -1,3 +1,6 @@
 [submodule "ref/Common"]
 	path = ref/Common
 	url = https://github.com/BeyondDimension/Common
+[submodule "ref/SteamClient"]
+	path = ref/SteamClient
+	url = https://github.com/BeyondDimension/SteamClient.git
