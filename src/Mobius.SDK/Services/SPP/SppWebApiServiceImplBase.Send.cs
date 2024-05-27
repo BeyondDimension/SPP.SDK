@@ -2,9 +2,6 @@ namespace Mobius.Services.SPP;
 
 partial class SppWebApiServiceImplBase
 {
-    //readonly Uri Referrer = new(ApiConstants.GetReferrer(DeviceInfo2.Platform(),
-    //    AssemblyInfo.FileVersion));
-
     /// <summary>
     /// 设置请求中的授权头
     /// </summary>
@@ -14,16 +11,6 @@ partial class SppWebApiServiceImplBase
     protected abstract Task<JWTEntity?> SetRequestHeaderAuthorization(
         HttpRequestMessage request,
         CancellationToken cancellationToken = default);
-    //{
-    //    var authToken = await userManager.GetAuthTokenAsync(cancellationToken);
-    //    var authHeaderValue = GetAuthenticationHeaderValue(authToken.Content);
-    //    if (authHeaderValue != null)
-    //    {
-    //        request.Headers.Authorization = authHeaderValue;
-    //        return authToken.Content;
-    //    }
-    //    return null;
-    //}
 
     /// <summary>
     /// 返回 HTTP 401 未授权，清空当前 AuthToken，并调用 SignOut
@@ -32,13 +19,6 @@ partial class SppWebApiServiceImplBase
     /// <param name="requestUri"></param>
     /// <param name="cancellationToken"></param>
     protected abstract Task Unauthorized(HttpMethod method, string requestUri, CancellationToken cancellationToken = default);
-    //{
-    //    logger.LogCritical(
-    //        "Unauthorized method: {method}, requestUri: {requestUri}",
-    //        method,
-    //        requestUri);
-    //    await userManager.SignOutAsync(cancellationToken);
-    //}
 
     /// <inheritdoc/>
     protected override HttpContentWrapper<TResponseBody> GetCustomSerializeContent<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] TResponseBody, [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] TRequestBody>(

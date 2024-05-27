@@ -10,13 +10,12 @@ namespace Mobius.Services.SPP;
 /// <param name="serviceProvider"></param>
 abstract partial class SppWebApiServiceImplBase(IServiceProvider serviceProvider) : WebApiClientFactoryService(serviceProvider.GetRequiredService<ILoggerFactory>().CreateLogger<SppWebApiServiceImplBase>(), serviceProvider), ISppWebApiService
 {
-    //readonly AppSecrets appSecrets = serviceProvider.GetRequiredService<IOptions<AppSecrets>>().Value;
-    //readonly IUserManager userManager = serviceProvider.GetRequiredService<IUserManager>();
     protected readonly IModelValidator modelValidator = serviceProvider.GetRequiredService<IModelValidator>();
 
     /// <inheritdoc/>
     protected override string ClientName => "SppWebApiS";
 
+    /// <inheritdoc/>
     public abstract bool IsDesignMode { get; }
 
     protected abstract RSA RSAInstance { get; }
@@ -30,38 +29,6 @@ abstract partial class SppWebApiServiceImplBase(IServiceProvider serviceProvider
     /// <param name="cancellationToken"></param>
     protected abstract Task<ApiRspImpl<CurrentUser?>> SaveAuthTokenAsync(JWTEntity authToken,
        CancellationToken cancellationToken = default);
-    //{
-    //    var user = await userManager.GetCurrentUserAsync(cancellationToken);
-    //    if (!user.IsSuccess)
-    //    {
-    //        return user;
-    //    }
-    //    else if (user.Content == null)
-    //    {
-    //        return ApiRspCode.NoResponseContent;
-    //    }
-    //    else
-    //    {
-    //        user.Content.AuthToken = authToken;
-    //        var result = await userManager.SetCurrentUserAsync(user.Content, cancellationToken);
-    //        if (result.IsSuccess)
-    //        {
-    //            var token = await this.GetShopUserTokenAsync();
-    //            if (token.IsSuccess && token.Content != null)
-    //            {
-    //                user.Content.ShopAuthToken = new JWTEntity()
-    //                {
-    //                    AccessToken = token.Content.AccessToken,
-    //                    ExpiresIn = DateTimeOffset.Now.AddSeconds(token.Content.ExpiresIn - 3600),
-    //                    RefreshToken = "RefreshToken",
-    //                };
-    //                await userManager.SetCurrentUserAsync(user.Content, cancellationToken);
-    //            }
-    //            return user;
-    //        }
-    //        return ApiRspCode.SetLoginResponseToUserManagerFail;
-    //    }
-    //}
 
     /// <summary>
     /// 保存商城用户登录凭证
@@ -70,27 +37,6 @@ abstract partial class SppWebApiServiceImplBase(IServiceProvider serviceProvider
     /// <param name="cancellationToken"></param>
     protected abstract Task<ApiRspImpl<CurrentUser?>> SaveShopAuthTokenAsync(JWTEntity authToken,
        CancellationToken cancellationToken = default);
-    //{
-    //    var user = await userManager.GetCurrentUserAsync(cancellationToken);
-    //    if (!user.IsSuccess)
-    //    {
-    //        return user;
-    //    }
-    //    else if (user.Content == null)
-    //    {
-    //        return ApiRspCode.NoResponseContent;
-    //    }
-    //    else
-    //    {
-    //        user.Content.ShopAuthToken = authToken;
-    //        var result = await userManager.SetCurrentUserAsync(user.Content, cancellationToken);
-    //        if (result.IsSuccess)
-    //        {
-    //            return user;
-    //        }
-    //        return ApiRspCode.SetLoginResponseToUserManagerFail;
-    //    }
-    //}
 
     /// <summary>
     /// 当登录完成时
@@ -101,32 +47,6 @@ abstract partial class SppWebApiServiceImplBase(IServiceProvider serviceProvider
     protected abstract Task<ApiRspImpl> OnLoginedAsync(IReadOnlyPhoneNumber? phoneNumber,
        ILoginResponse response,
        CancellationToken cancellationToken = default);
-    //{
-    //    ApiRspImpl result;
-
-    //    if (response is LoginOrRegisterResponse loginOrRegisterResponse)
-    //    {
-    //        var user = loginOrRegisterResponse.User;
-    //        if (user != null)
-    //        {
-    //            result = await IUserManager.Instance.SetCurrentUserInfoAsync(user, true, cancellationToken);
-    //            if (!result.IsSuccess)
-    //            {
-    //                return result;
-    //            }
-    //        }
-    //    }
-
-    //    CurrentUser cUser = new()
-    //    {
-    //        UserId = response.UserId,
-    //        AuthToken = response.AuthToken,
-    //        PhoneNumber = phoneNumber?.PhoneNumber ?? string.Empty,
-    //    };
-
-    //    result = await IUserManager.Instance.SetCurrentUserAsync(cUser, cancellationToken);
-    //    return result;
-    //}
 
     /// <summary>
     /// 根据 JWT 模型类获取 HTTP 授权头值
