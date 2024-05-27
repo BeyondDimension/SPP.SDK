@@ -112,15 +112,15 @@ public static partial class UrlConstants
     /// </summary>
     public static string OfficialWebsite_Notice => $"{OfficialWebsite}/notice?id={{0}}";
 
-    /// <summary>
-    /// 上传发布文件地址
-    /// </summary>
-    public static string OfficialWebsite_UploadsPublishFiles => $"{OfficialWebsite}/uploads/publish/files/{{0}}{FileEx.BIN}";
+    ///// <summary>
+    ///// 上传发布文件地址
+    ///// </summary>
+    //public static string OfficialWebsite_UploadsPublishFiles => $"{OfficialWebsite}/uploads/publish/files/{{0}}{FileEx.BIN}";
 
-    /// <summary>
-    /// 上传发布包地址
-    /// </summary>
-    public static string OfficialWebsite_UploadsPublish => $"{OfficialWebsite}/uploads/publish/{{0}}";
+    ///// <summary>
+    ///// 上传发布包地址
+    ///// </summary>
+    //public static string OfficialWebsite_UploadsPublish => $"{OfficialWebsite}/uploads/publish/{{0}}";
 
     /// <summary>
     /// 账号中心网址

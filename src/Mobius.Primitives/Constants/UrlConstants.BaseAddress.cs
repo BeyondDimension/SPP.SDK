@@ -127,7 +127,7 @@ partial class UrlConstants
     /// <summary>
     /// 商城 Api 域名
     /// </summary>
-    const string OfficialShopApiHostName = "shop.api.steampp.net";
+    internal const string OfficialShopApiHostName = "shop.api.steampp.net";
 
     const string OfficialShop_Ipv6Only_Development = "https://steampp.mossimo.net:7500";
     const string OfficialShop_MSTEST_Development = "https://ms-test.steampp.net";
