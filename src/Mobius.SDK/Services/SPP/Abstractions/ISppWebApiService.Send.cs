@@ -1,4 +1,4 @@
-namespace Mobius.Services.Abstractions;
+namespace Mobius.Services.SPP.Abstractions;
 
 #pragma warning disable CA1068 // CancellationToken 参数必须最后出现
 

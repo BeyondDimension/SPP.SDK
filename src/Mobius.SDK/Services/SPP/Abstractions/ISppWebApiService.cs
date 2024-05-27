@@ -1,4 +1,4 @@
-namespace Mobius.Services.Abstractions;
+namespace Mobius.Services.SPP.Abstractions;
 
 /// <summary>
 /// SppWebApi 服务（客户端侧调用 SDK Client）

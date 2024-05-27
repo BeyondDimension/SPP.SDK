@@ -1,4 +1,4 @@
-namespace Mobius.Services;
+namespace Mobius.Services.SPP;
 
 /// <summary>
 /// <see cref="ISppWebApiService"/> 的实现类

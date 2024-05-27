@@ -1,4 +1,4 @@
-namespace Mobius.Services.Abstractions;
+namespace Mobius.Services.SPP.Abstractions;
 
 static partial class SppWebApiServiceExtensions
 {

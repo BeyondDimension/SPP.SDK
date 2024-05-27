@@ -1,4 +1,4 @@
-namespace Mobius.Services;
+namespace Mobius.Services.SPP;
 
 partial class SppWebApiServiceImplBase
 {
