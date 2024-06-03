@@ -1,0 +1,33 @@
+files:
+  - source: /res/i18n/Strings.resx
+    ignore:
+      - '*.cs'
+    translation: /res/i18n/Strings.%two_letters_code%.resx
+  - source: /res/i18n/Accelerator.resx
+    ignore:
+      - '*.cs'
+    translation: /res/i18n/Accelerator.%two_letters_code%.resx
+  - source: /res/i18n/ArchiSteamFarmPlus.resx
+    ignore:
+      - '*.cs'
+    translation: /res/i18n/ArchiSteamFarmPlus.%two_letters_code%.resx
+  - source: /res/i18n/Authenticator.resx
+    ignore:
+      - '*.cs'
+    translation: /res/i18n/Authenticator.%two_letters_code%.resx
+  - source: /res/i18n/GameAccount.resx
+    ignore:
+      - '*.cs'
+    translation: /res/i18n/GameAccount.%two_letters_code%.resx
+  - source: /res/i18n/GameList.resx
+    ignore:
+      - '*.cs'
+    translation: /res/i18n/GameList.%two_letters_code%.resx
+  - source: /res/i18n/GameTools.resx
+    ignore:
+      - '*.cs'
+    translation: /res/i18n/GameTools.%two_letters_code%.resx
+  - source: /res/i18n/SteamIdleCard.resx
+    ignore:
+      - '*.cs'
+    translation: /res/i18n/SteamIdleCard.%two_letters_code%.resx
