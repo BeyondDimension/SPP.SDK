@@ -60,7 +60,7 @@ partial class UrlConstants
     /// <summary>
     /// SppWebApi 正式环境基地址
     /// </summary>
-    const string BaseUrl_API_Production = $"{String2.Prefix_HTTPS}{OfficialApiHostName}";
+    internal const string BaseUrl_API_Production = $"{String2.Prefix_HTTPS}{OfficialApiHostName}";
 
     /// <summary>
     /// SppWebApi 测试环境基地址（MSTEST）

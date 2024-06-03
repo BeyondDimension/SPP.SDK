@@ -44,7 +44,7 @@ abstract partial class SppWebApiServiceImplBase(IServiceProvider serviceProvider
     /// <param name="phoneNumber"></param>
     /// <param name="response"></param>
     /// <param name="cancellationToken"></param>
-    protected abstract Task<ApiRspImpl> OnLoginedAsync(IReadOnlyPhoneNumber? phoneNumber,
+    internal abstract Task<ApiRspImpl> OnLoginedAsync(IReadOnlyPhoneNumber? phoneNumber,
        ILoginResponse response,
        CancellationToken cancellationToken = default);
 
