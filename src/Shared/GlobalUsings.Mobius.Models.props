@@ -4,7 +4,6 @@
 		<Using Include="Mobius" />
 		<Using Include="Mobius.Models" />
 		<Using Include="Mobius.Models.Abstractions" />
-		<Using Include="Mobius.Models.App" />
 		<Using Include="Mobius.Models.Drawing" />
 		<Using Include="Mobius.Models.Infrastructure" />
 		<Using Include="Mobius.Models.Settings" />
