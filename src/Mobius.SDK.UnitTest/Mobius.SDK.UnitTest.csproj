@@ -5,6 +5,26 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<IsPackable>false</IsPackable>
 		<IsTestProject>true</IsTestProject>
+		<BeyondDimensionFeatures>
+			BD.Common8.Bcl;
+			BD.Common8.Primitives;
+			BD.Common8.Primitives.Toast.props;
+			BD.Common8.Primitives.Essentials.props;
+			BD.Common8.Primitives.ApiRsp.props;
+			BD.Common8.Primitives.PersonalData.PhoneNumber.props;
+			BD.Common8.Primitives.PersonalData.BirthDate.props;
+			BD.Common8.Primitives.District.props;
+			BD.Common8.Toast.props;
+			BD.Common8.Security.props;
+			BD.Common8.Essentials.props;
+			BD.Common8.Http.ClientFactory.props;
+			BD.Common8.UserInput.ModelValidator.props;
+			BD.SteamClient8.Primitives.props;
+			BD.SteamClient8.Models.props;
+			Mobius.Primitives;
+			Mobius.Models;
+			Mobius.SDK;
+		</BeyondDimensionFeatures>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -13,15 +33,12 @@
 		</Compile>
 	</ItemGroup>
 
-	<ItemGroup>
-		<Using Include="NUnit.Framework" />
-		<Using Include="NUnit.Framework.Interfaces" />
-		<Using Include="NUnit.Framework.Internal" />
-		<Using Include="NUnit.Framework.Internal.Commands" />
-	</ItemGroup>
+	<Import Project="$(MSBuildThisFileDirectory)..\Shared\GlobalUsings.Mobius.SDK.UnitTest.props" />
 
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Bcl.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\BD.Common8.UnitTest.props" />
-	<Import Project="$(MSBuildThisFileDirectory)..\Sdk\ProjectReference\Mobius.SDK.props" />
+	<ItemGroup>
+		<None Include="$(MSBuildThisFileDirectory)..\Shared\GlobalUsings.Mobius.SDK.UnitTest.props">
+			<LinkBase>Properties</LinkBase>
+		</None>
+	</ItemGroup>
 
 </Project>

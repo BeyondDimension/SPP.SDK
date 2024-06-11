@@ -1,0 +1,32 @@
+<Project>
+	<Import Condition="Exists('$(MSBuildThisFileDirectory)..\..\Shared\GlobalUsings.$(MSBuildThisFileName).props')" Project="$(MSBuildThisFileDirectory)..\..\Shared\GlobalUsings.$(MSBuildThisFileName).props" />
+	<ItemGroup Condition="Exists('$(MSBuildThisFileDirectory)..\..\Shared\GlobalUsings.$(MSBuildThisFileName).props')">
+		<None Include="$(MSBuildThisFileDirectory)..\..\Shared\GlobalUsings.$(MSBuildThisFileName).props">
+			<LinkBase>Properties</LinkBase>
+		</None>
+	</ItemGroup>
+	<PropertyGroup>
+		<!-- 👇 Common 库引用 -->
+		<BeyondDimensionFeatures>
+			$(BeyondDimensionFeatures)
+			BD.Common8.Bcl;
+			BD.Common8.Primitives;
+			BD.Common8.Primitives.Toast;
+			BD.Common8.Primitives.Essentials;
+			BD.Common8.Primitives.ApiRsp;
+			BD.Common8.Primitives.PersonalData.PhoneNumber;
+			BD.Common8.Primitives.PersonalData.BirthDate;
+			BD.Common8.Primitives.District;
+			BD.Common8.Toast;
+			BD.Common8.Security;
+			BD.Common8.Essentials;
+			BD.Common8.Http.ClientFactory;
+			BD.Common8.UserInput.ModelValidator;
+			BD.SteamClient8.Primitives;
+			BD.SteamClient8.Models;
+			Mobius.Primitives;
+			Mobius.Models;
+		</BeyondDimensionFeatures>
+		<!-- 👇 包引用（属性） -->
+	</PropertyGroup>
+</Project>

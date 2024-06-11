@@ -6,33 +6,4 @@
 		<PackageDescription>Watt Toolkit 服务端 SDK 服务类</PackageDescription>
 	</PropertyGroup>
 
-	<Import Project="$(MSBuildThisFileDirectory)..\Sdk\GeneratePackage.props" />
-	<Import Project="$(MSBuildThisFileDirectory)..\Sdk\ProjectReference\$(MSBuildProjectName).props" />
-
-	<ItemGroup>
-		<!-- 👇 Nuget 包引用的 GlobalUsings 配置 -->
-		<None Include="$(MSBuildThisFileDirectory)..\Shared\GlobalUsings.$(MSBuildThisFileName).props" Pack="true" PackagePath="buildTransitive">
-			<LinkBase>Properties\GlobalUsings</LinkBase>
-		</None>
-		<None Include="$(MSBuildThisFileDirectory)..\Sdk\buildTransitive\$(MSBuildThisFileName).props" Pack="true" PackagePath="buildTransitive" Visible="false" />
-		<!-- Reference GlobalUsings -->
-		<None Include="$(MSBuildThisFileDirectory)..\Sdk\$(MSBuildThisFileName)\GlobalUsings*.props" Pack="true" PackagePath="buildTransitive\MSBuildThisFileName" Visible="false" />
-		<None Include="$(MSBuildThisFileDirectory)..\Shared\GlobalUsings*.props" Pack="true" PackagePath="Shared" Visible="false" />
-	</ItemGroup>
-
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.Toast.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.Essentials.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.ApiRsp.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.PersonalData.PhoneNumber.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.PersonalData.BirthDate.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Primitives.District.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Toast.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Security.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Essentials.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.Http.ClientFactory.props" />
-	<Import Project="$(Path_Submodule)Common\src\Sdk\ProjectReference\BD.Common8.UserInput.ModelValidator.props" />
-
-	<Import Project="$(Path_Submodule)SteamClient\src\Sdk\ProjectReference\BD.SteamClient8.Primitives.props" />
-
 </Project>

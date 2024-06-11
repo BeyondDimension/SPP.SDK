@@ -1,0 +1,9 @@
+<Project>
+	<!-- 全局 using | Global usings -->
+	<ItemGroup>
+		<Using Include="NUnit.Framework" />
+		<Using Include="NUnit.Framework.Interfaces" />
+		<Using Include="NUnit.Framework.Internal" />
+		<Using Include="NUnit.Framework.Internal.Commands" />
+	</ItemGroup>
+</Project>

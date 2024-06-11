@@ -1,0 +1,12 @@
+<Project>
+	<!-- 📄 SDK 包引用 -->
+
+	<!-- 👇 源生成器 -->
+	<ItemGroup Condition="$(IsSourceGeneratorProject) != 'true'">
+		<!-- 👇 类库项目包引用 -->
+		<PackageReference Condition="$(BeyondDimensionFeatures.Contains('Mobius.Primitives;')) AND $(MSBuildProjectName) != 'Mobius.Primitives'" Include="Mobius.Primitives" />
+		<PackageReference Condition="$(BeyondDimensionFeatures.Contains('Mobius.Models;')) AND $(MSBuildProjectName) != 'Mobius.Models'" Include="Mobius.Models" />
+		<PackageReference Condition="$(BeyondDimensionFeatures.Contains('Mobius.SDK;')) AND $(MSBuildProjectName) != 'Mobius.SDK'" Include="Mobius.SDK" />
+	</ItemGroup>
+
+</Project>

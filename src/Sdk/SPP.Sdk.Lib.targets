@@ -1,0 +1,12 @@
+<Project>
+	<!-- 📄 SDK 配置 -->
+	<!--## Common8Reference Start -->
+
+	<ImportGroup Condition="$(IsSourceGeneratorProject) != 'true'">
+		<Import Condition="$(BeyondDimensionFeatures.Contains('Mobius.Primitives;')) AND $(MSBuildProjectName) != 'Mobius.Primitives'" Project="$(MSBuildThisFileDirectory)Projects\Mobius.Primitives.props" />
+		<Import Condition="$(BeyondDimensionFeatures.Contains('Mobius.Models;')) AND $(MSBuildProjectName) != 'Mobius.Models'" Project="$(MSBuildThisFileDirectory)Projects\Mobius.Models.props" />
+		<Import Condition="$(BeyondDimensionFeatures.Contains('Mobius.SDK;')) AND $(MSBuildProjectName) != 'Mobius.SDK'" Project="$(MSBuildThisFileDirectory)Projects\Mobius.SDK.props" />
+	</ImportGroup>
+
+	<!-- ## Common8Reference End -->
+</Project>

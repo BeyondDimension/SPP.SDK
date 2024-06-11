@@ -1,4 +1,6 @@
 <Project>
+	<Import Condition="$(IsSourceGeneratorProject) != 'true' AND $(MSBuildProjectName.StartsWith('Mobius.')) AND !$(MSBuildProjectName.StartsWith('Mobius.SourceGenerator.')) AND Exists('$(MSBuildThisFileDirectory)Sdk\Projects\$(MSBuildProjectName).props')" Project="$(MSBuildThisFileDirectory)Sdk\Projects\$(MSBuildProjectName).props" />
+
 	<Import Project="$(MSBuildThisFileDirectory)Version.props" />
 
 	<PropertyGroup>
@@ -12,18 +14,6 @@
 	<Import Project="$(Path_Submodule)Common\src\Sdk\Global.props" />
 
 	<PropertyGroup>
-		<GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
-		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-		<GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
-		<GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
-		<!--<GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>-->
-		<!--<GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>-->
-		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-		<!--<GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>-->
-		<GenerateNeutralResourcesLanguageAttribute>false</GenerateNeutralResourcesLanguageAttribute>
-	</PropertyGroup>
-
-	<PropertyGroup>
 		<Version>$(Version_Mobius_SDK)</Version>
 	</PropertyGroup>
 
@@ -33,17 +23,9 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<Compile Condition="$(MSBuildProjectName) != 'Tools.Build' AND $(MSBuildProjectName) != 'Tools.DocFX'" Include="..\AssemblyInfo.Attribute.cs">
-			<LinkBase>Properties</LinkBase>
-		</Compile>
-	</ItemGroup>
-
-	<ItemGroup>
 		<Compile Condition="$(MSBuildProjectName) != 'Mobius.SDK.UnitTest' AND $(IsTestProject) != 'true'" Include="$(MSBuildThisFileDirectory)Shared\InternalsVisibleTo.Mobius.SDK.UnitTest.cs">
 			<LinkBase>Properties\InternalsVisibleTo</LinkBase>
 		</Compile>
 	</ItemGroup>
-
-	<Import Project="$(Path_Submodule)Common\src\Sdk\Global.props" />
 </Project>
 
