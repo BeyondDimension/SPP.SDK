@@ -1,7 +1,7 @@
 <Project>
 	<!-- 版本号 | Version -->
 	<PropertyGroup>
-		<!--3.0.1MMdd.1hhmm-->
+		<!--8.yy.1MMdd.1hhmm-->
 		<Version_Mobius_SDK>8.24.10611.11400</Version_Mobius_SDK>
 	</PropertyGroup>
 </Project>
