@@ -12,5 +12,5 @@
 namespace Mobius.Resources;
 #pragma warning restore IDE0079 // 请删除不必要的忽略
 
-[ResXGeneratedCode(@"..\..\..\res\i18n\Strings.resx")]
+[ResXGeneratedCode(@"..\..\..\res\i18n\Strings.resx", version: 1)]
 public partial class Strings { }

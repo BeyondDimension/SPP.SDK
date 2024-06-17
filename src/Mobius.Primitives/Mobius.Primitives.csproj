@@ -7,6 +7,4 @@
 		<PackageDescription>Watt Toolkit 服务端 SDK 基本类</PackageDescription>
 	</PropertyGroup>
 
-	<Import Project="$(MSBuildThisFileDirectory)..\..\res\i18n\Strings.props" />
-
 </Project>
