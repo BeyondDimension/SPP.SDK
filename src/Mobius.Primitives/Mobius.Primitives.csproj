@@ -7,4 +7,10 @@
 		<PackageDescription>Watt Toolkit 服务端 SDK 基本类</PackageDescription>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<Compile Include="..\Shared\InternalsVisibleTo.Mobius.Primitives.cs">
+			<LinkBase>Properties</LinkBase>
+		</Compile>
+	</ItemGroup>
+
 </Project>
