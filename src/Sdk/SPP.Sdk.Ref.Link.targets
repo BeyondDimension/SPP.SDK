@@ -1,29 +1,27 @@
 <Project>
 	<!-- 📄 SDK 源码引用 -->
 
-	<ItemGroup Condition="$(IsSourceGeneratorProject) != 'true'">
-		<!-- 👇 类库项目源码引用 -->
-		<ItemGroup Condition="$(BeyondDimensionFeatures.Contains('Mobius.Primitives;')) AND $(MSBuildProjectName) != 'Mobius.Primitives'">
-			<Compile Include="$(MSBuildThisFileDirectory)..\Mobius.Primitives\**\*.cs">
-				<LinkBase>_SourceReference\Mobius.Primitives</LinkBase>
-			</Compile>
-			<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.Primitives\bin\**" />
-			<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.Primitives\obj\**" />
-		</ItemGroup>
-		<ItemGroup Condition="$(BeyondDimensionFeatures.Contains('Mobius.Models;')) AND $(MSBuildProjectName) != 'Mobius.Models'">
-			<Compile Include="$(MSBuildThisFileDirectory)..\Mobius.Models\**\*.cs">
-				<LinkBase>_SourceReference\Mobius.Models</LinkBase>
-			</Compile>
-			<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.Models\bin\**" />
-			<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.Models\obj\**" />
-		</ItemGroup>
-		<ItemGroup Condition="$(BeyondDimensionFeatures.Contains('Mobius.SDK;')) AND $(MSBuildProjectName) != 'Mobius.SDK'">
-			<Compile Include="$(MSBuildThisFileDirectory)..\Mobius.SDK\**\*.cs">
-				<LinkBase>_SourceReference\Mobius.SDK</LinkBase>
-			</Compile>
-			<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.SDK\bin\**" />
-			<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.SDK\obj\**" />
-		</ItemGroup>
+	<!-- 👇 类库项目源码引用 -->
+	<ItemGroup Condition="$(IsSourceGeneratorProject) != 'true' AND $(BeyondDimensionFeatures.Contains('Mobius.Primitives;')) AND $(MSBuildProjectName) != 'Mobius.Primitives'">
+		<Compile Include="$(MSBuildThisFileDirectory)..\Mobius.Primitives\**\*.cs">
+			<LinkBase>_SourceReference\Mobius.Primitives</LinkBase>
+		</Compile>
+		<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.Primitives\bin\**" />
+		<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.Primitives\obj\**" />
+	</ItemGroup>
+	<ItemGroup Condition="$(IsSourceGeneratorProject) != 'true' AND $(BeyondDimensionFeatures.Contains('Mobius.Models;')) AND $(MSBuildProjectName) != 'Mobius.Models'">
+		<Compile Include="$(MSBuildThisFileDirectory)..\Mobius.Models\**\*.cs">
+			<LinkBase>_SourceReference\Mobius.Models</LinkBase>
+		</Compile>
+		<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.Models\bin\**" />
+		<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.Models\obj\**" />
+	</ItemGroup>
+	<ItemGroup Condition="$(IsSourceGeneratorProject) != 'true' AND $(BeyondDimensionFeatures.Contains('Mobius.SDK;')) AND $(MSBuildProjectName) != 'Mobius.SDK'">
+		<Compile Include="$(MSBuildThisFileDirectory)..\Mobius.SDK\**\*.cs">
+			<LinkBase>_SourceReference\Mobius.SDK</LinkBase>
+		</Compile>
+		<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.SDK\bin\**" />
+		<Compile Remove="$(MSBuildThisFileDirectory)..\Mobius.SDK\obj\**" />
 	</ItemGroup>
 
 </Project>

@@ -1,5 +1,5 @@
 <Project>
-	<ItemGroup Condition="$(MSBuildProjectName) == 'Mobius.Shared'">
+	<ItemGroup Condition="$(MSBuildProjectName) == 'Mobius'">
 		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Strings.resx">
 			<Link>Resources\Strings.resx</Link>
 			<LogicalName>FxResources.Strings.resources</LogicalName>
@@ -33,7 +33,7 @@
 			<LogicalName>FxResources.Strings.zh-Hant.resources</LogicalName>
 		</EmbeddedResource>
 	</ItemGroup>
-	<ItemGroup Condition="$(MSBuildProjectName) != 'Mobius.Shared'">
+	<ItemGroup Condition="$(MSBuildProjectName) != 'Mobius'">
 		<EmbeddedResource Include="$(MSBuildThisFileDirectory)\Strings.resx">
 			<Link>_SourceReference\Mobius.Shared\Resources\Strings.resx</Link>
 			<LogicalName>FxResources.Strings.resources</LogicalName>
