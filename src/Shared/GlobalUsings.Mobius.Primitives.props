@@ -9,6 +9,11 @@
 		<Using Include="Mobius.Enums.Accelerator" />
 		<Using Include="Mobius.Enums.Basics" />
 		<Using Include="Mobius.Enums.Basics.Article" />
+		<Using Include="Mobius.Enums.Basics.Email" />
+		<Using Include="Mobius.Enums.Order" />
+		<Using Include="Mobius.Enums.Raffle" />
+		<Using Include="Mobius.Enums.Plugins" />
+		<Using Include="Mobius.Enums.Payment" />
 		<Using Include="Mobius.Enums.Basics.Notice" />
 		<Using Include="Mobius.Enums.BigDataAnalysis" />
 		<Using Include="Mobius.Enums.Devices" />
@@ -20,5 +25,7 @@
 		<Using Include="Mobius.Enums.Shop" />
 		<Using Include="Mobius.Enums.Text" />
 		<Using Include="Mobius.Enums.UI" />
+		<Using Include="Mobius.Columns.Ordering" />
+		<Using Include="Mobius.Enums.SteamRecharge" />
 	</ItemGroup>
 </Project>
