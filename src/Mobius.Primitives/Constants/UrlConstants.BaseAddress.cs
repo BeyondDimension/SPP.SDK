@@ -2,60 +2,12 @@ namespace Mobius.Constants;
 
 partial class UrlConstants
 {
-    #region OfficialWebsite
+    #region ApiBaseUrl
 
     /// <summary>
     /// SppWebApi 域名
     /// </summary>
     const string OfficialApiHostName = "api.steampp.net";
-
-    const string OfficialWebsite_Ipv6Only_Development = "https://steampp.mossimo.net:8500";
-    const string OfficialWebsite_MSTEST_Development = "https://ms-test.steampp.net";
-    const string OfficialWebsite_Production = "https://steampp.net";
-
-    static bool IsOfficialWebsiteUrl(string value) => value switch
-    {
-        OfficialWebsite_Production or
-        OfficialWebsite_MSTEST_Development or
-        OfficialWebsite_Ipv6Only_Development => true,
-        _ => false,
-    };
-
-    static string _OfficialWebsite =
-#if DEBUG || USE_DEV_API
-#if USE_DEV_MSTEST
-        OfficialWebsite_MSTEST_Development;
-#else
-        OfficialWebsite_Ipv6Only_Development;
-#endif
-
-#else
-        OfficialWebsite_Production;
-
-#endif
-
-    /// <summary>
-    /// 官网网址
-    /// </summary>
-    public static string OfficialWebsite
-    {
-        get => _OfficialWebsite;
-        private set
-        {
-            const bool httpsOnly =
-#if DEBUG
-                false;
-#else
-                true;
-#endif
-            if (IsOfficialWebsiteUrl(value) || String2.IsHttpUrl(value, httpsOnly))
-                _OfficialWebsite = value;
-        }
-    }
-
-    #endregion
-
-    #region ApiBaseUrl
 
     /// <summary>
     /// SppWebApi 正式环境基地址
@@ -122,6 +74,56 @@ partial class UrlConstants
 
     #endregion
 
+#if !PROJ_SETUP
+
+    #region OfficialWebsite
+
+    const string OfficialWebsite_Ipv6Only_Development = "https://steampp.mossimo.net:8500";
+    const string OfficialWebsite_MSTEST_Development = "https://ms-test.steampp.net";
+    const string OfficialWebsite_Production = "https://steampp.net";
+
+    static bool IsOfficialWebsiteUrl(string value) => value switch
+    {
+        OfficialWebsite_Production or
+        OfficialWebsite_MSTEST_Development or
+        OfficialWebsite_Ipv6Only_Development => true,
+        _ => false,
+    };
+
+    static string _OfficialWebsite =
+#if DEBUG || USE_DEV_API
+#if USE_DEV_MSTEST
+        OfficialWebsite_MSTEST_Development;
+#else
+        OfficialWebsite_Ipv6Only_Development;
+#endif
+
+#else
+        OfficialWebsite_Production;
+
+#endif
+
+    /// <summary>
+    /// 官网网址
+    /// </summary>
+    public static string OfficialWebsite
+    {
+        get => _OfficialWebsite;
+        private set
+        {
+            const bool httpsOnly =
+#if DEBUG
+                false;
+#else
+                true;
+#endif
+            if (IsOfficialWebsiteUrl(value) || String2.IsHttpUrl(value, httpsOnly))
+                _OfficialWebsite = value;
+        }
+    }
+
+    #endregion
+
     #region WattGame
 
     /// <summary>
@@ -174,4 +176,6 @@ partial class UrlConstants
     }
 
     #endregion
+
+#endif
 }
