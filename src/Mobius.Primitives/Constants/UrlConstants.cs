@@ -146,11 +146,6 @@ public static partial class UrlConstants
     public static string OfficialWebsite_Web_Login_ => $"{OfficialWebsite}/account/login?tk={{0}}&t={{1}}&redirectUrl={{2}}";
 
     /// <summary>
-    /// GNU 通用公共许可证网址
-    /// </summary>
-    public const string License_GPLv3 = "https://www.gnu.org/licenses/gpl-3.0.html";
-
-    /// <summary>
     /// 微软应用商店应用网址
     /// </summary>
     public const string MicrosoftStoreAppWebsite = "https://www.microsoft.com/store/apps/" + MicrosoftStoreId;
