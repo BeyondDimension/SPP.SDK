@@ -10,6 +10,7 @@
 		<Using Include="Mobius.Enums.Basics" />
 		<Using Include="Mobius.Enums.Basics.Article" />
 		<Using Include="Mobius.Enums.Basics.Email" />
+		<Using Include="Mobius.Enums.Basics.AppVersion" />
 		<Using Include="Mobius.Enums.Order" />
 		<Using Include="Mobius.Enums.Raffle" />
 		<Using Include="Mobius.Enums.Plugins" />
