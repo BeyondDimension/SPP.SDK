@@ -3,7 +3,6 @@
 	<ItemGroup>
 		<Using Include="Mobius" />
 		<Using Include="Mobius.Services" />
-		<Using Include="Mobius.Services.SPP" />
-		<Using Include="Mobius.Services.SPP.Abstractions" />
+		<Using Include="Mobius.Services.Abstractions" />
 	</ItemGroup>
 </Project>

@@ -4,22 +4,40 @@
 		<Using Include="Mobius" />
 		<Using Include="Mobius.Models" />
 		<Using Include="Mobius.Models.Abstractions" />
-		<Using Include="Mobius.Models.Drawing" />
-		<Using Include="Mobius.Models.Infrastructure" />
-		<Using Include="Mobius.Models.Settings" />
+
+		<!-- 👇 网络加速 -->
 		<Using Include="Mobius.Models.Accelerator" />
 		<Using Include="Mobius.Models.Accelerator.Request" />
 		<Using Include="Mobius.Models.Accelerator.Script" />
 		<Using Include="Mobius.Models.Accelerator.YarpConfig" />
 		<Using Include="Mobius.Models.Accelerator.YarpConfig.Abstractions" />
+
+		<!-- 👇 基础服务 -->
 		<Using Include="Mobius.Models.Basics" />
 		<Using Include="Mobius.Models.Basics.Article" />
+		
+		<!-- 👇 大数据分析 -->
 		<Using Include="Mobius.Models.BigDataAnalysis" />
+
+		<!-- 👇 图形绘制 -->
+		<Using Include="Mobius.Models.Drawing" />
+
+		<!-- 👇 账号系统/身份服务 -->
 		<Using Include="Mobius.Models.Identity" />
 		<Using Include="Mobius.Models.Identity.Abstractions" />
 		<Using Include="Mobius.Models.Identity.Request" />
 		<Using Include="Mobius.Models.Identity.Response" />
+
+		<!-- 👇 基础设施 -->
+		<Using Include="Mobius.Models.Infrastructure" />
+
+		<!-- 👇 广告 -->
 		<Using Include="Mobius.Models.Komaasharu" />
+
+		<!-- 👇 Settings 用户自定义设置项 -->
+		<Using Include="Mobius.Models.Settings" />
+
+		<!-- 👇 WattGame 商城 -->
 		<Using Include="Mobius.Models.Shop" />
 		<Using Include="Mobius.Models.Shop.Abstractions" />
 		<Using Include="Mobius.Models.Shop.Request" />

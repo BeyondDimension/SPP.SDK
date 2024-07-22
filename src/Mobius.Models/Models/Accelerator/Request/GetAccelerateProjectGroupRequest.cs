@@ -18,9 +18,7 @@ public sealed partial class GetAccelerateProjectGroupRequest
 
     /// <inheritdoc cref="SppWebApiCompatDevicePlatform"/>
     [MPKey(2), MP2Key(2)]
-#pragma warning disable CS0618 // 类型或成员已过时
     public SppWebApiCompatDevicePlatform Platform { get; set; }
-#pragma warning restore CS0618 // 类型或成员已过时
 
     /// <inheritdoc cref="DeviceIdiom"/>
     [MPKey(3), MP2Key(3)]

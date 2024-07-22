@@ -1,4 +1,5 @@
-namespace Mobius.Services.SPP;
+#pragma warning disable IDE0130 // 命名空间与文件夹结构不匹配
+namespace Mobius.Services;
 
 /// <summary>
 /// <see cref="ISppWebApiService"/> 的实现类

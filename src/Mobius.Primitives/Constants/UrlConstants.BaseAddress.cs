@@ -1,13 +1,30 @@
+using static Mobius.Constants.UrlConstants;
+
 namespace Mobius.Constants;
 
 partial class UrlConstants
 {
-    #region ApiBaseUrl
+    #region ApiBaseUrl/SppWebApi
+
+    /// <summary>
+    /// Watt Toolkit 官网域名
+    /// </summary>
+    internal const string OfficialHostName = "steampp.net";
 
     /// <summary>
     /// SppWebApi 域名
     /// </summary>
-    const string OfficialApiHostName = "api.steampp.net";
+    internal const string OfficialApiHostName = "api.steampp.net";
+
+    /// <summary>
+    /// 开发环境域名
+    /// </summary>
+    internal const string OfficialHostName_Development = "ms-test.steampp.net";
+
+    /// <summary>
+    /// 开发环境域名（仅 IPV6）
+    /// </summary>
+    internal const string OfficialHostName_Ipv6Only_Development = "steampp.mossimo.net";
 
     /// <summary>
     /// SppWebApi 正式环境基地址
@@ -17,28 +34,94 @@ partial class UrlConstants
     /// <summary>
     /// SppWebApi 测试环境基地址（MSTEST）
     /// </summary>
-    const string BaseUrl_API_MSTEST_Development = "https://ms-test.steampp.net";
+    internal const string BaseUrl_API_MSTEST_Development = $"{String2.Prefix_HTTPS}{OfficialHostName_Development}";
 
     /// <summary>
-    /// SppWebApi 测试环境基地址（Ipv6Only）
+    /// SppWebApi 测试环境基地址（仅 IPV6）
     /// </summary>
-    const string BaseUrl_API_Ipv6Only_Development = "https://steampp.mossimo.net:8800";
+    internal const string BaseUrl_API_Ipv6Only_Development = $"{String2.Prefix_HTTPS}{OfficialHostName_Ipv6Only_Development}:8800";
 
     /// <summary>
     /// SppWebApi 本地调试基地址（Debug）
     /// </summary>
     public const string BaseUrl_API_Debug = "https://localhost:5001";
 
-    static bool IsApiBaseUrl(string value) => value switch
-    {
-        BaseUrl_API_Production or
-        BaseUrl_API_MSTEST_Development or
-        BaseUrl_API_Ipv6Only_Development or
-        BaseUrl_API_Debug => true,
-        _ => false,
-    };
+    /// <summary>
+    /// SppWebApi 基地址
+    /// </summary>
+    public static string ApiBaseUrl =>
+#if PROJ_MOBIUS
+        HostConstants_.V.ApiBaseUrl ??
+#endif
+        UrlConstants_.BaseUrl_API;
 
-    static string BaseUrl_API =
+    #endregion
+
+#if !PROJ_SETUP
+
+    #region OfficialWebsite/官网
+
+    internal const string OfficialWebsite_Ipv6Only_Development = $"{String2.Prefix_HTTPS}{OfficialHostName_Ipv6Only_Development}:8500";
+    internal const string OfficialWebsite_MSTEST_Development = $"{String2.Prefix_HTTPS}{OfficialHostName_Development}";
+    internal const string OfficialWebsite_Production = $"{String2.Prefix_HTTPS}{OfficialHostName}";
+
+    /// <summary>
+    /// 官网网址
+    /// </summary>
+    public static string OfficialWebsite =>
+#if PROJ_MOBIUS
+        HostConstants_.V.OfficialWebsite ??
+#endif
+        UrlConstants_._OfficialWebsite;
+
+    #endregion
+
+    #region WattGame/商城
+
+    /// <summary>
+    /// 商城官网域名
+    /// </summary>
+    internal const string OfficialShopHostName = "shop.steampp.net";
+
+    /// <summary>
+    /// 商城 Api 域名
+    /// </summary>
+    internal const string OfficialShopApiHostName = "shop.api.steampp.net";
+
+    /// <summary>
+    /// 商城静态资源域名
+    /// </summary>
+    internal const string OfficialShopStaticHostName = "shop.static.steampp.net";
+
+    internal const string OfficialShop_Ipv6Only_Development = $"{String2.Prefix_HTTPS}{OfficialHostName_Ipv6Only_Development}:7500";
+    internal const string OfficialShop_MSTEST_Development = $"{String2.Prefix_HTTPS}{OfficialHostName_Development}";
+    internal const string OfficialShop_Production = $"{String2.Prefix_HTTPS}{OfficialShopHostName}";
+
+    /// <summary>
+    /// 官网网址
+    /// </summary>
+    public static string WattGame =>
+#if PROJ_MOBIUS
+        HostConstants_.V.WattGame ??
+#endif
+        UrlConstants_._WattGame;
+
+    #endregion
+
+#endif
+}
+
+static partial class UrlConstants_
+{
+    #region ApiBaseUrl/SppWebApi
+
+    internal
+#if PROJ_MOBIUS
+        const
+#else
+        static
+#endif
+        string BaseUrl_API =
 #if DEBUG || USE_DEV_API
 #if USE_DEV_MSTEST
         BaseUrl_API_MSTEST_Development;
@@ -51,13 +134,10 @@ partial class UrlConstants
 
 #endif
 
-    /// <summary>
-    /// SppWebApi 基地址
-    /// </summary>
-    public static string ApiBaseUrl
+    /// <inheritdoc cref="UrlConstants.ApiBaseUrl"/>
+    internal static string ApiBaseUrl
     {
-        get => BaseUrl_API;
-        private set
+        set
         {
             const bool httpsOnly =
 #if DEBUG
@@ -65,9 +145,13 @@ partial class UrlConstants
 #else
                 true;
 #endif
-            if (IsApiBaseUrl(value) || String2.IsHttpUrl(value, httpsOnly))
+            if (String2.IsHttpUrl(value, httpsOnly))
             {
+#if PROJ_MOBIUS
+                HostConstants_.V.ApiBaseUrl = value;
+#else
                 BaseUrl_API = value;
+#endif
             }
         }
     }
@@ -76,21 +160,15 @@ partial class UrlConstants
 
 #if !PROJ_SETUP
 
-    #region OfficialWebsite
+    #region OfficialWebsite/官网
 
-    const string OfficialWebsite_Ipv6Only_Development = "https://steampp.mossimo.net:8500";
-    const string OfficialWebsite_MSTEST_Development = "https://ms-test.steampp.net";
-    const string OfficialWebsite_Production = "https://steampp.net";
-
-    static bool IsOfficialWebsiteUrl(string value) => value switch
-    {
-        OfficialWebsite_Production or
-        OfficialWebsite_MSTEST_Development or
-        OfficialWebsite_Ipv6Only_Development => true,
-        _ => false,
-    };
-
-    static string _OfficialWebsite =
+    internal
+#if PROJ_MOBIUS
+        const
+#else
+        static
+#endif
+        string _OfficialWebsite =
 #if DEBUG || USE_DEV_API
 #if USE_DEV_MSTEST
         OfficialWebsite_MSTEST_Development;
@@ -103,13 +181,10 @@ partial class UrlConstants
 
 #endif
 
-    /// <summary>
-    /// 官网网址
-    /// </summary>
-    public static string OfficialWebsite
+    /// <inheritdoc cref="UrlConstants.OfficialWebsite"/>
+    internal static string OfficialWebsite
     {
-        get => _OfficialWebsite;
-        private set
+        set
         {
             const bool httpsOnly =
 #if DEBUG
@@ -117,33 +192,28 @@ partial class UrlConstants
 #else
                 true;
 #endif
-            if (IsOfficialWebsiteUrl(value) || String2.IsHttpUrl(value, httpsOnly))
+            if (String2.IsHttpUrl(value, httpsOnly))
+            {
+#if PROJ_MOBIUS
+                HostConstants_.V.OfficialWebsite = value;
+#else
                 _OfficialWebsite = value;
+#endif
+            }
         }
     }
 
     #endregion
 
-    #region WattGame
+    #region WattGame/商城
 
-    /// <summary>
-    /// 商城 Api 域名
-    /// </summary>
-    internal const string OfficialShopApiHostName = "shop.api.steampp.net";
-
-    const string OfficialShop_Ipv6Only_Development = "https://steampp.mossimo.net:7500";
-    const string OfficialShop_MSTEST_Development = "https://ms-test.steampp.net";
-    const string OfficialShop_Production = "https://shop.steampp.net";
-
-    static bool IsWattGame(string value) => value switch
-    {
-        OfficialShop_Production or
-        OfficialShop_MSTEST_Development or
-        OfficialShop_Ipv6Only_Development => true,
-        _ => false,
-    };
-
-    static string _WattGame =
+    internal
+#if PROJ_MOBIUS
+        const
+#else
+        static
+#endif
+        string _WattGame =
 #if DEBUG || USE_DEV_API
 #if USE_DEV_MSTEST
         OfficialShop_MSTEST_Development;
@@ -156,13 +226,10 @@ partial class UrlConstants
 
 #endif
 
-    /// <summary>
-    /// 官网网址
-    /// </summary>
-    public static string WattGame
+    /// <inheritdoc cref="UrlConstants.WattGame"/>
+    internal static string WattGame
     {
-        get => _WattGame;
-        private set
+        set
         {
             const bool httpsOnly =
 #if DEBUG
@@ -170,8 +237,14 @@ partial class UrlConstants
 #else
                 true;
 #endif
-            if (IsWattGame(value) || String2.IsHttpUrl(value, httpsOnly))
+            if (String2.IsHttpUrl(value, httpsOnly))
+            {
+#if PROJ_MOBIUS
+                HostConstants_.V.WattGame = value;
+#else
                 _WattGame = value;
+#endif
+            }
         }
     }
 

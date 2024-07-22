@@ -1,4 +1,5 @@
-namespace Mobius.Services.SPP.Abstractions;
+#pragma warning disable IDE0130 // 命名空间与文件夹结构不匹配
+namespace Mobius.Services.Abstractions;
 
 #pragma warning disable CA1068 // CancellationToken 参数必须最后出现
 

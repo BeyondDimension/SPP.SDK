@@ -6,7 +6,7 @@ namespace Mobius.Enums.Text;
 public enum TextReaderProvider : byte
 {
     /// <summary>
-    /// 系统默认，例如 Win 上的记事本
+    /// 系统默认，例如 Windows 上的记事本
     /// </summary>
     SystemDefault,
 

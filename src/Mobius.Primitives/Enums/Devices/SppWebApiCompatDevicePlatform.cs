@@ -4,8 +4,11 @@ namespace Mobius.Enums.Devices;
 /// SppWebApi 定义的平台，用于旧接口兼容，新接口应使用 <see cref="DevicePlatform2"/>
 /// </summary>
 [Flags]
-[Description("System.Runtime.Devices.Platform")]
-[Obsolete("use DevicePlatform2 Or ClientPlatform replace on top of newly added content.")]
+[Description(
+"""
+use DevicePlatform2 Or ClientPlatform replace on top of newly added content.
+oldType: System.Runtime.Devices.Platform
+""")]
 public enum SppWebApiCompatDevicePlatform
 {
     /// <summary>
@@ -36,7 +39,7 @@ public enum SppWebApiCompatDevicePlatform
     /// <summary>
     /// Universal Windows Platform
     /// </summary>
-    [Obsolete("use Win32")]
+    [Description("use Win32")]
     UWP = 64,
 
     /// <summary>
@@ -48,7 +51,10 @@ public enum SppWebApiCompatDevicePlatform
 /// <summary>
 /// Enum 扩展 <see cref="SppWebApiCompatDevicePlatform"/>
 /// </summary>
-[Obsolete("use DevicePlatform2 Or ClientPlatform replace on top of newly added content.")]
+[Description(
+"""
+use DevicePlatform2 Or ClientPlatform replace on top of newly added content.
+""")]
 public static partial class SppWebApiCompatDevicePlatformEnumExtensions
 {
     /// <summary>

@@ -13,9 +13,7 @@ public sealed partial class ActiveUserRecordModel : IExplicitHasValue, IDeviceId
     /// 使用平台
     /// </summary>
     [MP2Key(1)]
-#pragma warning disable CS0618 // 类型或成员已过时
     public SppWebApiCompatDevicePlatform Platform { get; set; }
-#pragma warning restore CS0618 // 类型或成员已过时
 
     /// <summary>
     /// 设备类型

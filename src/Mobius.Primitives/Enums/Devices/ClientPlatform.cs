@@ -329,7 +329,6 @@ public static class ClientPlatformEnumExtensions
 
     #endregion DeviceIdiom
 
-    [Obsolete("use DevicePlatform2 Or ClientPlatform replace on top of newly added content.")]
     public static SppWebApiCompatDevicePlatform ToPlatform(this ClientPlatform source)
     {
         SppWebApiCompatDevicePlatform result = default;
@@ -386,7 +385,6 @@ public static class ClientPlatformEnumExtensions
         return result;
     }
 
-    [Obsolete("use DevicePlatform2 Or ClientPlatform replace on top of newly added content.")]
     public static ClientPlatform ToClientPlatform(this SppWebApiCompatDevicePlatform source)
     {
         ClientPlatform result = default;

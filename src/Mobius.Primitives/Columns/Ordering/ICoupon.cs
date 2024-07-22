@@ -59,7 +59,7 @@ public interface ICoupon
     decimal Value { get; set; }
 }
 
-public static class CouponExtensions
+public static partial class CouponExtensions
 {
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static void SetCoupon(this ICoupon coupon, ICoupon value)

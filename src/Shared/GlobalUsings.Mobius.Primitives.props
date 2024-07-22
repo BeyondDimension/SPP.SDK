@@ -2,31 +2,68 @@
 	<!-- 全局 using | Global usings -->
 	<ItemGroup>
 		<Using Include="Mobius" />
+		<Using Include="Mobius.Columns" />
 		<Using Include="Mobius.Constants" />
 		<Using Include="Mobius.Enums" />
+
+		<!-- 👇 订单 -->
+		<Using Include="Mobius.Enums.Order" />
+		<Using Include="Mobius.Columns.Ordering" />
+
+		<!-- 👇 网络加速 -->
+		<Using Include="Mobius.Enums.Accelerator" />
+
+		<!-- 👇 应用程序 -->
 		<Using Include="Mobius.Enums.App" />
 		<Using Include="Mobius.Enums.App.PlatformNotification" />
-		<Using Include="Mobius.Enums.Accelerator" />
+
+		<!-- 👇 基础服务 -->
 		<Using Include="Mobius.Enums.Basics" />
 		<Using Include="Mobius.Enums.Basics.Article" />
 		<Using Include="Mobius.Enums.Basics.Email" />
-		<Using Include="Mobius.Enums.Basics.AppVersion" />
-		<Using Include="Mobius.Enums.Order" />
-		<Using Include="Mobius.Enums.Raffle" />
-		<Using Include="Mobius.Enums.Plugins" />
-		<Using Include="Mobius.Enums.Payment" />
 		<Using Include="Mobius.Enums.Basics.Notice" />
+		<Using Include="Mobius.Enums.Basics.AppVersion" />
+
+		<!-- 👇 抽奖活动 -->
+		<Using Include="Mobius.Enums.Raffle" />
+
+		<!-- 👇 客户端插件 -->
+		<Using Include="Mobius.Enums.Plugins" />
+
+		<!-- 👇 支付 -->
+		<Using Include="Mobius.Enums.Payment" />
+
+		<!-- 👇 大数据分析 -->
 		<Using Include="Mobius.Enums.BigDataAnalysis" />
+
+		<!-- 👇 客户端设备、平台、处理器架构 -->
 		<Using Include="Mobius.Enums.Devices" />
+
+		<!-- 👇 全球化、多语言，国家或地区 -->
 		<Using Include="Mobius.Enums.Globalization" />
+
+		<!-- 👇 账号系统/身份服务 -->
 		<Using Include="Mobius.Enums.Identity" />
+
+		<!-- 👇 基础设施 -->
 		<Using Include="Mobius.Enums.Infrastructure" />
+
+		<!-- 👇 广告 -->
 		<Using Include="Mobius.Enums.Komaasharu" />
+
+		<!-- 👇 客户端平台 -->
 		<Using Include="Mobius.Enums.Platform" />
+
+		<!-- 👇 WattGame 商城 -->
 		<Using Include="Mobius.Enums.Shop" />
-		<Using Include="Mobius.Enums.Text" />
-		<Using Include="Mobius.Enums.UI" />
-		<Using Include="Mobius.Columns.Ordering" />
+
+		<!-- 👇 Steam 充值 -->
 		<Using Include="Mobius.Enums.SteamRecharge" />
+
+		<!-- 👇 文本、字符串、编码 -->
+		<Using Include="Mobius.Enums.Text" />
+
+		<!-- 👇 界面相关 -->
+		<Using Include="Mobius.Enums.UI" />
 	</ItemGroup>
 </Project>

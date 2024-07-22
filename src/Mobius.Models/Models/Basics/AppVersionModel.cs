@@ -28,9 +28,7 @@ public sealed partial class AppVersionModel : IKeyModel<Guid>, IExplicitHasValue
     /// (单选)支持的平台
     /// </summary>
     [MP2Key(3)]
-#pragma warning disable CS0618 // 类型或成员已过时
     public SppWebApiCompatDevicePlatform Platform { get; set; }
-#pragma warning restore CS0618 // 类型或成员已过时
 
     /// <summary>
     /// (多或单选)支持的 CPU 构架
