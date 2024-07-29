@@ -1,7 +1,7 @@
 namespace Mobius.Enums.UI;
 
 /// <summary>
-/// 切换开关值
+/// 切换开关状态值
 /// </summary>
 public enum ToggleSwitchValue : byte
 {

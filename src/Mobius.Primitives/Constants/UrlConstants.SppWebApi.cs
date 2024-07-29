@@ -7,14 +7,16 @@ partial class UrlConstants // SppWebApi
     /// </summary>
     /// <param name="komaasharuId"></param>
     /// <returns></returns>
-    public static string GetAdvertisementJumpUrl(Guid komaasharuId)
-        => $"{BaseUrl_API}/komaasharu/{komaasharuId}";
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static FormattableString GetAdvertisementJumpUrl(Guid komaasharuId)
+        => $"{ApiBaseUrl}/komaasharu/{komaasharuId}";
 
     /// <summary>
     /// 根据广告 Id 获取图片地址
     /// </summary>
     /// <param name="komaasharuId"></param>
     /// <returns></returns>
-    public static string GetAdvertisementImageUrl(Guid komaasharuId)
-        => $"{BaseUrl_API}/komaasharu/images/{komaasharuId}";
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static FormattableString GetAdvertisementImageUrl(Guid komaasharuId)
+        => $"{ApiBaseUrl}/komaasharu/images/{komaasharuId}";
 }
