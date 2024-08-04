@@ -25,3 +25,30 @@ public enum WindowBackgroundMaterial : byte
     /// </summary>
     Mica = 5,
 }
+
+#if PROJ_MOBIUS
+/// <summary>
+/// 对枚举 <see cref="WindowBackgroundMaterial"/> 的扩展
+/// </summary>
+public static class WindowTransparencyLevelExtensions
+{
+    /// <summary>
+    /// <see cref="WindowBackgroundMaterial"/> => <see cref="WindowTransparencyLevel"/>?
+    /// </summary>
+    /// <param name="value"></param>
+    /// <returns></returns>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static WindowTransparencyLevel? ToWindowTransparencyLevel(
+        this WindowBackgroundMaterial value)
+    {
+        return value switch
+        {
+            WindowBackgroundMaterial.None => WindowTransparencyLevel.None,
+            WindowBackgroundMaterial.Blur => WindowTransparencyLevel.Blur,
+            WindowBackgroundMaterial.AcrylicBlur => WindowTransparencyLevel.AcrylicBlur,
+            WindowBackgroundMaterial.Mica => WindowTransparencyLevel.Mica,
+            _ => null,
+        };
+    }
+}
+#endif
