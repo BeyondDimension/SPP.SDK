@@ -11,6 +11,11 @@ public static partial class UrlConstants
     public const string MicrosoftStoreId = "9MTCFHS560NG";
 
     /// <summary>
+    /// https://store.steampowered.com/app/2425030
+    /// </summary>
+    public const uint SteamAppId = 2425030;
+
+    /// <summary>
     /// spp
     /// </summary>
     public const string CUSTOM_URL_SCHEME_NAME = "spp";
@@ -179,4 +184,9 @@ public static partial class UrlConstants
     /// 本地化（crowdin）
     /// </summary>
     public const string CrowdinUrl = "https://crowdin.com/project/steampp";
+
+    /// <summary>
+    /// Avalonia UI
+    /// </summary>
+    public const string AvaloniaUIUrl = "https://avaloniaui.net";
 }

@@ -197,4 +197,10 @@ public sealed partial record class UISettingsModel
     /// </summary>
     [MP2Key(17), JsonPropertyOrder(17)]
     public HashSet<string>? SortMenuTabs { get; set; }
+
+    /// <summary>
+    /// 程序启动时默认页
+    /// </summary>
+    [MP2Key(18), JsonPropertyOrder(18)]
+    public string? StartDefaultPageName { get; set; }
 }

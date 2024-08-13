@@ -49,6 +49,7 @@ public enum AppServicesLevel : uint
     /// <summary>
     /// IPC 进程管理员权限
     /// </summary>
+    [Obsolete]
     IPCRoot = 256,
 
     /// <summary>
