@@ -1,5 +1,3 @@
-using Mobius.Models.Shop.Model;
-
 namespace Mobius.Models.Shop;
 
 public partial class CoreCmsGoodsModel

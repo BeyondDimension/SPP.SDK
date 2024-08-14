@@ -8,7 +8,7 @@ public partial class CoreCmsPinTuanRecordModel
     /// <summary>
     /// 构造函数
     /// </summary>
-    public CoreCmsPinTuanRecord()
+    public CoreCmsPinTuanRecordModel()
     {
     }
 
