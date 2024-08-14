@@ -42,5 +42,8 @@
 		<Using Include="Mobius.Models.Shop.Abstractions" />
 		<Using Include="Mobius.Models.Shop.Request" />
 		<Using Include="Mobius.Models.Shop.Response" />
+
+		<!-- 👇 插件 -->
+		<Using Include="Mobius.Models.Plugin.Response" />
 	</ItemGroup>
 </Project>
