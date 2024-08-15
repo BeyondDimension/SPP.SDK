@@ -9,7 +9,7 @@ public sealed partial class PluginUpdateDetailModel
     /// <summary>
     /// 插件 Id
     /// </summary>
-    public Guid Id { get; set; }
+    public string UniqueName { get; set; } = "";
 
     /// <summary>
     /// 最新版本号 如果有更新
