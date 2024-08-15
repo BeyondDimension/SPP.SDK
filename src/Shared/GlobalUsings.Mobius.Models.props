@@ -45,5 +45,6 @@
 
 		<!-- 👇 插件 -->
 		<Using Include="Mobius.Models.Plugin.Response" />
+		<Using Include="Mobius.Models.Plugin.Request" />
 	</ItemGroup>
 </Project>
