@@ -111,7 +111,7 @@ public class WebApiCallBack
     /// 提交数据
     /// </summary>
     [SystemTextJsonProperty("otherData")]
-    public object OtherData { get; set; } = null;
+    public object? OtherData { get; set; }
 
     /// <summary>
     /// 状态码
