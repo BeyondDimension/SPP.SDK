@@ -93,5 +93,32 @@ partial class SppWebApiServiceImplBase
                 return ApiRspHelper.Code((ApiRspCode)response.StatusCode, obj.Msg, obj.Data);
             }
         }
+
+        public static async Task<object?> ShopApiDeserializeImpl<TData, TOtherData>(WebApiClientService s, HttpResponseMessage response, CancellationToken cancellationToken = default)
+        {
+            using var stream = await response.Content.ReadAsStreamAsync(cancellationToken).ConfigureAwait(false);
+#pragma warning disable IL2026 // Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access otherwise can break functionality when trimming application code
+#pragma warning disable IL3050 // Calling members annotated with 'RequiresDynamicCodeAttribute' may break functionality when AOT compiling.
+            var obj = await SystemTextJsonSerializer.DeserializeAsync<ShopBaseResponse<TData, TOtherData>>(stream, ((SppWebApiServiceImplBase)s).UseJsonSerializerOptions_ShopApi, cancellationToken: cancellationToken);
+#pragma warning restore IL3050 // Calling members annotated with 'RequiresDynamicCodeAttribute' may break functionality when AOT compiling.
+#pragma warning restore IL2026 // Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access otherwise can break functionality when trimming application code
+            if (obj == null)
+            {
+                return ApiRspHelper.Code<TData>(ApiRspCode.NoResponseContent);
+            }
+            if (obj.Status)
+            {
+                var result = new ResultResponse<TData, TOtherData>
+                {
+                    Data = obj.Data,
+                    OtherData = obj.OtherData,
+                };
+                return ApiRspHelper.Ok(result);
+            }
+            else
+            {
+                return ApiRspHelper.Code((ApiRspCode)response.StatusCode, obj.Msg, obj.Data);
+            }
+        }
     }
 }

@@ -178,5 +178,28 @@ partial interface ISppWebApiService
         HttpHandlerCategory category = DefaultHttpHandlerCategory)
         where TRequestModel : notnull;
 
+    /// <summary>
+    /// RequestModel+ResponseModel(调用 Shop 服务端接口)
+    /// </summary>
+    /// <typeparam name="TRequestModel">请求模型类型</typeparam>
+    /// <typeparam name="TResponseModel">响应模型类型</typeparam>
+    /// <typeparam name="TResponseOtherDataModel">OtherData 响应模型</typeparam>
+    /// <param name="cancellationToken">传播应取消操作的通知</param>
+    /// <param name="method">HTTP 方法</param>
+    /// <param name="requestUri">服务端接口 Url 地址</param>
+    /// <param name="request">请求模型</param>
+    /// <param name="responseContentMaybeNull">响应内容是否能为<see langword="null"/></param>
+    /// <param name="isAnonymous">是否使用匿名身份访问</param>
+    /// <param name="category"></param>
+    /// <returns></returns>
+    Task<ApiRspImpl<ResultResponse<TResponseModel, TResponseOtherDataModel>?>> SendShopAsync<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] TRequestModel, [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] TResponseModel, [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] TResponseOtherDataModel>(
+        CancellationToken cancellationToken,
+        HttpMethod method,
+        string requestUri,
+        TRequestModel? request,
+        bool responseContentMaybeNull = false,
+        bool isAnonymous = false,
+        HttpHandlerCategory category = DefaultHttpHandlerCategory)
+        where TRequestModel : notnull;
     #endregion
 }

@@ -559,4 +559,29 @@ partial class SppWebApiServiceImplBase
             shopApiDeserialize: SppWebApiClientSendArgs.ShopApiDeserializeImpl<TResponseModel>);
         return rsp;
     }
+
+    /// <inheritdoc/>
+    public async Task<ApiRspImpl<ResultResponse<TResponseModel, TResponseOtherDataModel>?>> SendShopAsync<[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] TRequestModel, [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] TResponseModel, [DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.All)] TResponseOtherDataModel>(
+        CancellationToken cancellationToken,
+        HttpMethod method,
+        string requestUri,
+        TRequestModel? request,
+        bool responseContentMaybeNull,
+        bool isAnonymous,
+        HttpHandlerCategory category)
+        where TRequestModel : notnull
+    {
+        var rsp = await SendCoreAsync<TRequestModel, ResultResponse<TResponseModel, TResponseOtherDataModel>>(
+            isAnonymous: isAnonymous,
+            isApi: true,
+            cancellationToken,
+            method,
+            requestUri,
+            requestModel: request,
+            responseContentMaybeNull,
+            isSecurity: false,
+            category: category,
+            shopApiDeserialize: SppWebApiClientSendArgs.ShopApiDeserializeImpl<TResponseModel, TResponseOtherDataModel>);
+        return rsp;
+    }
 }
