@@ -21,7 +21,7 @@ partial class UrlConstants // 自定义 Url 协议
     /// <summary>
     /// 管理指定 steam appid 游戏成就（自定义 Url 协议）
     /// </summary>
-    public const string Segment_SteamAchievement = $"{CUSTOM_URL_SCHEME}team/achievement/";
+    public const string Segment_SteamAchievement = $"{CUSTOM_URL_SCHEME}steam/achievement/";
 
     /// <summary>
     /// 管理指定 steam appid 游戏云存档（自定义 Url 协议）

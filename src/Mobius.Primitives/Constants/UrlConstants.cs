@@ -168,7 +168,7 @@ public static partial class UrlConstants
     /// <summary>
     /// 赞助（爱发电）
     /// </summary>
-    public const string SponsorUrl_afdian = "https://afdian.net/@rmbgame";
+    public const string SponsorUrl_afdian = "https://afdian.com/@rmbgame";
 
     /// <summary>
     /// 赞助（ko-fi）
