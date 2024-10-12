@@ -51,9 +51,10 @@ partial class UrlConstants
     /// </summary>
     public static string ApiBaseUrl =>
 #if PROJ_MOBIUS
-        HostConstants_.V.ApiBaseUrl ??
-#endif
+        HostConstants_.V.ApiBaseUrl.GetValueOrDefault(UrlConstants_.BaseUrl_API);
+#else
         UrlConstants_.BaseUrl_API;
+#endif
 
     #endregion
 
@@ -70,9 +71,10 @@ partial class UrlConstants
     /// </summary>
     public static string OfficialWebsite =>
 #if PROJ_MOBIUS
-        HostConstants_.V.OfficialWebsite ??
-#endif
+        HostConstants_.V.OfficialWebsite.GetValueOrDefault(UrlConstants_._OfficialWebsite);
+#else
         UrlConstants_._OfficialWebsite;
+#endif
 
     #endregion
 
@@ -97,14 +99,30 @@ partial class UrlConstants
     internal const string OfficialShop_MSTEST_Development = $"{String2.Prefix_HTTPS}{OfficialHostName_Development}";
     internal const string OfficialShop_Production = $"{String2.Prefix_HTTPS}{OfficialShopHostName}";
 
+    internal const string OfficialShopApiBaseUrl_Ipv6Only_Development = $"{String2.Prefix_HTTPS}{OfficialShopApiHostName}";
+    internal const string OfficialShopApiBaseUrl_MSTEST_Development = $"{String2.Prefix_HTTPS}{OfficialShopApiHostName}";
+    internal const string OfficialShopApiBaseUrl_Production = $"{String2.Prefix_HTTPS}{OfficialShopApiHostName}";
+
     /// <summary>
-    /// 官网网址
+    /// 商城官网网址
     /// </summary>
     public static string WattGame =>
 #if PROJ_MOBIUS
-        HostConstants_.V.WattGame ??
-#endif
+        HostConstants_.V.WattGame.GetValueOrDefault(UrlConstants_._WattGame);
+#else
+
         UrlConstants_._WattGame;
+#endif
+
+    /// <summary>
+    /// 商城 Api 网址
+    /// </summary>
+    public static string WattGameApiBaseUrl =>
+#if PROJ_MOBIUS
+        HostConstants_.V.WattGameApiBaseUrl.GetValueOrDefault(UrlConstants_._WattGameApiBaseUrl);
+#else
+        UrlConstants_._WattGameApiBaseUrl;
+#endif
 
     #endregion
 
@@ -228,6 +246,47 @@ static partial class UrlConstants_
 
     /// <inheritdoc cref="UrlConstants.WattGame"/>
     internal static string WattGame
+    {
+        set
+        {
+            const bool httpsOnly =
+#if DEBUG
+                false;
+#else
+                true;
+#endif
+            if (String2.IsHttpUrl(value, httpsOnly))
+            {
+#if PROJ_MOBIUS
+                HostConstants_.V.WattGame = value;
+#else
+                _WattGame = value;
+#endif
+            }
+        }
+    }
+
+    internal
+#if PROJ_MOBIUS
+        const
+#else
+        static
+#endif
+        string _WattGameApiBaseUrl =
+#if DEBUG || USE_DEV_API
+#if USE_DEV_MSTEST
+        OfficialShopApiBaseUrl_MSTEST_Development;
+#else
+        OfficialShopApiBaseUrl_Ipv6Only_Development;
+#endif
+
+#else
+        OfficialShopApiBaseUrl_Production;
+
+#endif
+
+    /// <inheritdoc cref="UrlConstants.WattGameApiBaseUrl"/>
+    internal static string WattGameApiBaseUrl
     {
         set
         {

@@ -153,7 +153,14 @@ public sealed partial record class UISettingsModel
         set
         {
             if (string.Equals(value,
-                "avares://BD.WTTS.Client.Avalonia/UI/Assets/back.png", // 兼容 WattToolkit.sln
+                DefaultWindowBackgroundCustomImagePathOld, // 兼容 WattToolkit.sln
+                StringComparison.OrdinalIgnoreCase))
+            {
+                value = DefaultWindowBackgroundCustomImagePath;
+            }
+            if (DefaultWindowBackgroundCustomImagePath2 != DefaultWindowBackgroundCustomImagePath &&
+                string.Equals(value,
+                DefaultWindowBackgroundCustomImagePath2,
                 StringComparison.OrdinalIgnoreCase))
             {
                 value = DefaultWindowBackgroundCustomImagePath;
@@ -166,7 +173,14 @@ public sealed partial record class UISettingsModel
     /// 自定义背景图像路径的默认值
     /// </summary>
     public const string DefaultWindowBackgroundCustomImagePath =
-        "avares://Mobius/Assets/back.png";
+#if PROJ_MOBIUS
+        XamlConstants.Assets_Back;
+#else
+        DefaultWindowBackgroundCustomImagePath2;
+#endif
+
+    const string DefaultWindowBackgroundCustomImagePath2 = "avares://Mobius/UI/Assets/back.png";
+    const string DefaultWindowBackgroundCustomImagePathOld = "avares://BD.WTTS.Client.Avalonia/UI/Assets/back.png";
 
     /// <summary>
     /// 自定义背景图像不透明度

@@ -31,7 +31,7 @@ public sealed partial record class SteamSettingsModel
     public bool IsAutoRunSteam { get; set; }
 
     /// <summary>
-    /// 自动运行 Steam
+    /// Steam 启动时最小化到托盘
     /// </summary>
     [MP2Key(4), JsonPropertyOrder(4)]
     public bool IsRunSteamMinimized { get; set; }
