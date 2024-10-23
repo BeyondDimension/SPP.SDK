@@ -5,6 +5,7 @@ namespace Mobius.Constants;
 /// </summary>
 public static partial class UrlConstants
 {
+#if !PROJ_SETUP
     /// <summary>
     /// 微软应用商店包 Id
     /// </summary>
@@ -164,6 +165,8 @@ public static partial class UrlConstants
     /// 微软应用商店应用（评论）协议
     /// </summary>
     public const string MicrosoftStoreReviewLink = "ms-windows-store://review/?ProductId=" + MicrosoftStoreId;
+
+#endif
 
     /// <summary>
     /// 赞助（爱发电）
