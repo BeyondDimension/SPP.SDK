@@ -11,10 +11,17 @@
 		<Using Include="Mobius.Models.Accelerator.Script" />
 		<Using Include="Mobius.Models.Accelerator.YarpConfig" />
 		<Using Include="Mobius.Models.Accelerator.YarpConfig.Abstractions" />
+		<Using Include="Mobius.Models.Accelerator.ServerSideForwardConfig"/>
 
 		<!-- 👇 基础服务 -->
 		<Using Include="Mobius.Models.Basics" />
 		<Using Include="Mobius.Models.Basics.Article" />
+		<Using Include="Mobius.Models.Basics.AppVersion" />
+		<Using Include="Mobius.Models.Basics.Response" />
+		
+		<!-- 👇 短信 -->
+		<Using Include="Mobius.Models.AuthMessage.Abstractions" />
+		<Using Include="Mobius.Models.AuthMessage" />
 		
 		<!-- 👇 大数据分析 -->
 		<Using Include="Mobius.Models.BigDataAnalysis" />
@@ -27,12 +34,20 @@
 		<Using Include="Mobius.Models.Identity.Abstractions" />
 		<Using Include="Mobius.Models.Identity.Request" />
 		<Using Include="Mobius.Models.Identity.Response" />
+		<Using Include="Mobius.Models.Identity.Wallet" />
+		<Using Include="Mobius.Models.Identity.v1" />
+
+		<!-- 👇 用户身份验证 -->
+		<Using Include="Mobius.Models.Authenticator" />
+		<Using Include="Mobius.Models.Authenticator.Request" />
+		<Using Include="Mobius.Models.Authenticator.Response" />
 
 		<!-- 👇 基础设施 -->
 		<Using Include="Mobius.Models.Infrastructure" />
 
 		<!-- 👇 广告 -->
 		<Using Include="Mobius.Models.Komaasharu" />
+		<Using Include="Mobius.Models.Komaasharu.Raffle" />
 
 		<!-- 👇 Settings 用户自定义设置项 -->
 		<Using Include="Mobius.Models.Settings" />
@@ -50,5 +65,33 @@
 
 		<!-- 👇 加速 VIP -->
 		<Using Include="Mobius.Models.AcceleratorVip" />
+
+		<!-- 👇 游戏库 -->
+		<Using Include="Mobius.Models.GameLibrary.Jobs" />
+		<Using Include="Mobius.Models.GameLibrary.Jobs.Distributed" />
+		<Using Include="Mobius.Models.GameLibrary.User" />
+		<Using Include="Mobius.Models.GameLibrary.Request" />
+		<Using Include="Mobius.Models.GameLibrary.Response" />
+		<Using Include="Mobius.Models.GameLibrary.User" />
+
+		<!-- 👇 订单 -->
+		<Using Include="Mobius.Models.Ordering" />
+
+		<!-- 👇 支付 -->
+		<Using Include="Mobius.Models.Payment" />
+
+		<!-- 👇 赞助 -->
+		<Using Include="Mobius.Models.Sponsor" />
+
+		<!-- 👇 SteamBot -->
+		<Using Include="Mobius.Models.SteamBot" />
+		<Using Include="Mobius.Models.SteamBot.WishList" />
+
+		<!-- 👇 Steam 充值 -->
+		<Using Include="Mobius.Models.SteamRecharge" />
+
+		<!-- 👇 迅游 -->
+		<Using Include="Mobius.Models.XunYou" />
+		<Using Include="Mobius.Models.XunYou.VipEndTime" />
 	</ItemGroup>
 </Project>
