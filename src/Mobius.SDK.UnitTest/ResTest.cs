@@ -2,7 +2,10 @@ using SR = Mobius.Resources.Strings;
 
 namespace Mobius.SDK.UnitTest;
 
-public class ResTest
+/// <summary>
+/// 测试 Resx 资源
+/// </summary>
+public sealed class ResTest
 {
     [Test]
     public void StringsTest()

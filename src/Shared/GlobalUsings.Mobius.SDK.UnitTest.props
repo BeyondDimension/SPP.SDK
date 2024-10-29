@@ -5,5 +5,8 @@
 		<Using Include="NUnit.Framework.Interfaces" />
 		<Using Include="NUnit.Framework.Internal" />
 		<Using Include="NUnit.Framework.Internal.Commands" />
+
+		<Using Include="Mobius.SDK.UnitTest" />
+		<Using Include="Mobius.SDK.UnitTest.Extensions" />
 	</ItemGroup>
 </Project>
