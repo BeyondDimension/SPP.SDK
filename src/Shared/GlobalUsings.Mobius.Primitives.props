@@ -13,6 +13,12 @@
 		<!-- 👇 网络加速 -->
 		<Using Include="Mobius.Enums.Accelerator" />
 
+		<!-- 👇 用户身份验证 -->
+		<Using Include="Mobius.Enums.Authenticator" />
+
+		<!-- 👇 短信 -->
+		<Using Include="Mobius.Columns.AuthMessage" />
+
 		<!-- 👇 应用程序 -->
 		<Using Include="Mobius.Enums.App" />
 		<Using Include="Mobius.Enums.App.PlatformNotification" />
@@ -65,5 +71,19 @@
 
 		<!-- 👇 界面相关 -->
 		<Using Include="Mobius.Enums.UI" />
+
+		<!-- 👇 游戏库 -->
+		<Using Include="Mobius.Enums.GameLibrary" />
+		
+		<!-- 👇 赞助 -->
+		<Using Include="Mobius.Enums.Sponsor" />
+
+		<!-- 👇 SteamBot -->
+		<Using Include="Mobius.Enums.SteamBot" />
+
+		<!-- 👇 迅游 -->
+		<Using Include="Mobius.Enums.XunYou" />
+
+		<Using Include="Mobius.Enums.File" />
 	</ItemGroup>
 </Project>
