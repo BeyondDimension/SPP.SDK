@@ -13,4 +13,10 @@
 		</Compile>
 	</ItemGroup>
 
+	<ItemGroup>
+		<None Include="..\..\res\i18n\Strings*.resx">
+			<LinkBase>Resources</LinkBase>
+		</None>
+	</ItemGroup>
+
 </Project>

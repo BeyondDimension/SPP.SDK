@@ -1,6 +1,6 @@
 namespace Mobius.Models.SteamBot.WishList;
 
-[MPObj(true), MP2Obj(GenerateType.VersionTolerant, MP2SerializeLayout.Sequential)]
+[MPObj(true), MP2Obj(MP2SerializeLayout.Sequential)]
 public partial struct WishListJobDistributedSalveModel()
 {
     public BotConfigModel BotConfig { get; set; }

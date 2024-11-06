@@ -1,7 +1,7 @@
 namespace Mobius.Models.SteamBot.WishList;
 
-[MPObj(true), MP2Obj(GenerateType.VersionTolerant, MP2SerializeLayout.Sequential)]
-public partial struct WishListJobDistributedMasterItem
+[MPObj(true), MP2Obj(MP2SerializeLayout.Sequential)]
+public partial record struct WishListJobDistributedMasterItem
 {
     public Guid CommonTaskId { get; set; }
 
